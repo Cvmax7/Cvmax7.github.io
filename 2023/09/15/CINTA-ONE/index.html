@@ -1,276 +1,282 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="Cvmax7">
-    
-    <meta name="description" content="SCNU-Network Engineering Class2-WZH">
-    
-    
-    
-    
-    
-    
-    <title>CINTA-ONE-2023.09.14 | Cvmax7</title>
-    <link href="http://example.com" rel="prefetch" />
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Cvmax7">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="CINTA-ONE1. 迭代版本的简单乘法12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#define _CRT_SECURE_NO_WARNINGS 1#include &lt;st">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CINTA-ONE-2023.09.14">
+<meta property="og:url" content="http://example.com/2023/09/15/CINTA-ONE/index.html">
+<meta property="og:site_name" content="Cvmax7">
+<meta property="og:description" content="CINTA-ONE1. 迭代版本的简单乘法12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#define _CRT_SECURE_NO_WARNINGS 1#include &lt;st">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:\Users\27644\AppData\Roaming\Typora\typora-user-images\image-20230913234217849.png">
+<meta property="article:published_time" content="2023-09-15T09:32:42.000Z">
+<meta property="article:modified_time" content="2023-09-16T06:13:01.708Z">
+<meta property="article:author" content="Cvmax7">
+<meta property="article:tag" content="Learning">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="c:\Users\27644\AppData\Roaming\Typora\typora-user-images\image-20230913234217849.png">
+  
+  
+  
+  <title>CINTA-ONE-2023.09.14 - Cvmax7</title>
 
-    
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/aos.css">
-<link rel="stylesheet" href="/css/style.css">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
-    
-<script src="/js/jquery.min.js"></script>
 
-    
-<script src="/js/bootstrap.min.js"></script>
 
-    
-<script src="/js/aos.js"></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
 
-    
-<script src="/js/highslide/highslide-full.min.js"></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
-    
-<link rel="stylesheet" href="/js/highslide/highslide.css">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
-    <style type="text/css">
-        @media (max-width: 768px) {
-            body {
-                background-color: #f0f0f0;
-                background: url('/imgs/xsbg.gif');
-                background-attachment: fixed;
-            }
-        }
-    </style>
-    
-    <!--<script type="text/javascript">
-      if (document.images) {
-        var avatar = new Image();
-        avatar.src = '/imgs/avatar.jpg'
-        var previews = 'http://p4.itc.cn/q_70/images03/20200804/5b7a13c1348440c9988c231de622ed78.jpeg'.split(',')
-        var previewsPreLoad = []
-        for(var i = 0; i < length; i++) {
-          previewsPreLoad.push(new Image())
-          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
-        }
-      }
-    </script>-->
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
 <meta name="generator" content="Hexo 6.3.0"></head>
+
+
 <body>
-    <!-- 背景轮播图功能 -->
-    <section class="hidden-xs">
-    <ul class="cb-slideshow">
-        <li><span>天若</span></li>
-        <li><span>有情</span></li>
-        <li><span>天亦老</span></li>
-        <li><span>我为</span></li>
-        <li><span>长者</span></li>
-        <li><span>续一秒</span></li>
-    </ul>
-</section>
-    <!-- 欧尼酱功能, 谁用谁知道 -->
+  
+
+  <header>
     
-    <header class="navbar navbar-inverse" id="gal-header">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target=".bs-navbar-collapse"
-                    aria-expanded="false">
-                <span class="fa fa-lg fa-reorder"></span>
-            </button>
-            <a href="http://example.com">
-                
-                <style>
-                    #gal-header .navbar-brand {
-                        height: 54px;
-                        line-height: 24px;
-                        font-size: 28px;
-                        opacity: 1;
-                        background-color: rgba(0,0,0,0);
-                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
-                    }
-                </style>
-                <!-- 这里使用文字(navbar_text or config.title) -->
-                <div class="navbar-brand">Barcalona No.1</div>
-                
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
             </a>
-        </div>
-        <div class="collapse navbar-collapse bs-navbar-collapse">
-            <ul class="nav navbar-nav" id="menu-gal">
-                
-                
-                <li class="">
-                    <a href="/">
-                        <i class="fa fa-home"></i>HomePage
-                    </a>
-                </li>
-                
-                
-                
-                
-                <li class="dropdown">
-                    <!-- TODO 添加hover dropdown效果 -->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-                        <i class="fa fa-list"></i>SchoolAssignment
-                    </a>
-                    <ul class="dropdown-menu">
-                        
-                        
-                        <li>
-                            <a href="/categories/CINTA/">CINTA</a>
-                        </li>
-                        
-                        
-                        
-                    </ul>
-                </li>
-                
-                
-                
-                
-                <li class="">
-                    <a href="/about">
-                        <i class="fa fa-user"></i>Self-Introduction
-                    </a>
-                </li>
-                
-                
-            </ul>
-        </div>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
-</header>
-    <div id="gal-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 gal-right" id="mainstay">
-                    
-<article class="article well article-body" id="article">
-    <div class="breadcrumb">
-        <i class="fa fa-home"></i>
-        <a href="http://example.com">Cvmax7</a>
-        >
-        <span>CINTA-ONE-2023.09.14</span>
-    </div>
-    <!-- 大型设备详细文章 -->
-    <div class="hidden-xs">
-        <div class="title-article">
-            <h1>
-                <a href="/2023/09/15/CINTA-ONE/">CINTA-ONE-2023.09.14</a>
-            </h1>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="CINTA-ONE-2023.09.14"></span>
+          
         </div>
-        <div class="tag-article">
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-09-15 17:32" pubdate>
+          2023年9月15日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">CINTA-ONE-2023.09.14</h1>
             
-            <span class="label label-gal">
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/Learning/">Learning</a>
-                
-            </span>
             
-            <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2023-09-15
-            </span>
-            
-        </div>
-    </div>
-    <!-- 小型设备详细文章 -->
-    <div class="visible-xs">
-        <center>
-            <div class="title-article">
-                <h4>
-                    <a href="/2023/09/15/CINTA-ONE/">CINTA-ONE-2023.09.14</a>
-                </h4>
-            </div>
-            <p>
-                <i class="fa fa-calendar"></i> 2023-09-15
-            </p>
-            <p>
+              <div class="markdown-body">
                 
-                <i class="fa fa-tags"></i>
-                
-                <a href="/tags/Learning/">Learning</a>
-                
-                
-                
-            </p>
-        </center>
-    </div>
-    <div class="content-article">
-        <h1 id="CINTA-ONE"><a href="#CINTA-ONE" class="headerlink" title="CINTA-ONE"></a>CINTA-ONE</h1><h1 id="1-迭代版本的简单乘法"><a href="#1-迭代版本的简单乘法" class="headerlink" title="1. 迭代版本的简单乘法"></a>1. 迭代版本的简单乘法</h1><pre><code class="lang-c">#define _CRT_SECURE_NO_WARNINGS 1
-#include &lt;stdio.h&gt;
-
-// 简单乘法
-int multiply1(int a, int b);
-
-// 简单乘法的第二种思路
-int multiply2(int a, int b);
-
-// 迭代version的简单乘法
-int multiply3(int a, int b);
-
-// 判断一个数是否为偶数
-bool Iseven(int a);
-
-int main() &#123;
-
-    printf(&quot;乘积为：%d\n&quot;, multiply1(19, 20));
-    printf(&quot;乘积为：%d\n&quot;, multiply2(19, 20));
-    printf(&quot;乘积为：%d\n&quot;, multiply3(19, 20));
-
-
-    return 0;
-&#125;
-
-int multiply1(int a, int b)
-&#123;
-    if (b == 0) return 0;
-    else return a + multiply1(a, b - 1);
-&#125;
-
-int multiply2(int a, int b)
-&#123;
-    int res = 0;
-    for (int i = 0; i &lt; b; i++)
-    &#123;
-        res += a;
-    &#125;
-    return res;
-&#125;
-
-int multiply3(int a, int b)
-&#123;
-    int res = 0;
-    if (Iseven(b) == 1)
-    &#123;
-        for (int i = 0; i &lt; (b / 2); i++)
-        &#123;
-            res += a;
-        &#125;
-        res *= 2;
-        return res;
-    &#125;
-    else
-    &#123;
-        for (int i = 0; i &lt; (b / 2); i++)
-        &#123;
-            res += a;
-        &#125;
-        res *= 2;
-        res += a;
-        return res;
-    &#125;
-&#125;
-
-bool Iseven(int a)
-&#123;
-    if (a % 2 == 0) return true;
-    else return false;
-&#125;
-</code></pre>
-<p>运行结果如下：<img src="C:\Users\27644\AppData\Roaming\Typora\typora-user-images\image-20230913234217849.png" alt="image-20230913234217849"></p>
+                <h1 id="CINTA-ONE"><a href="#CINTA-ONE" class="headerlink" title="CINTA-ONE"></a>CINTA-ONE</h1><h1 id="1-迭代版本的简单乘法"><a href="#1-迭代版本的简单乘法" class="headerlink" title="1. 迭代版本的简单乘法"></a>1. 迭代版本的简单乘法</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-comment">// 简单乘法</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">multiply1</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;<br><br><span class="hljs-comment">// 简单乘法的第二种思路</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">multiply2</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;<br><br><span class="hljs-comment">// 迭代version的简单乘法</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">multiply3</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;<br><br><span class="hljs-comment">// 判断一个数是否为偶数</span><br><span class="hljs-type">bool</span> <span class="hljs-title function_">Iseven</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br><br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;乘积为：%d\n&quot;</span>, multiply1(<span class="hljs-number">19</span>, <span class="hljs-number">20</span>));<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;乘积为：%d\n&quot;</span>, multiply2(<span class="hljs-number">19</span>, <span class="hljs-number">20</span>));<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;乘积为：%d\n&quot;</span>, multiply3(<span class="hljs-number">19</span>, <span class="hljs-number">20</span>));<br><br><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">multiply1</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span><br>&#123;<br>	<span class="hljs-keyword">if</span> (b == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> a + multiply1(a, b - <span class="hljs-number">1</span>);<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">multiply2</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span><br>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; b; i++)<br>	&#123;<br>		res += a;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">multiply3</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span><br>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">if</span> (Iseven(b) == <span class="hljs-number">1</span>)<br>	&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; (b / <span class="hljs-number">2</span>); i++)<br>		&#123;<br>			res += a;<br>		&#125;<br>		res *= <span class="hljs-number">2</span>;<br>		<span class="hljs-keyword">return</span> res;<br>	&#125;<br>	<span class="hljs-keyword">else</span><br>	&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; (b / <span class="hljs-number">2</span>); i++)<br>		&#123;<br>			res += a;<br>		&#125;<br>		res *= <span class="hljs-number">2</span>;<br>		res += a;<br>		<span class="hljs-keyword">return</span> res;<br>	&#125;<br>&#125;<br><br><span class="hljs-type">bool</span> <span class="hljs-title function_">Iseven</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span><br>&#123;<br>	<span class="hljs-keyword">if</span> (a % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>运行结果如下：<img src="C:\Users\27644\AppData\Roaming\Typora\typora-user-images\image-20230913234217849.png" srcset="/img/loading.gif" lazyload alt="image-20230913234217849"></p>
 <h1 id="2-证明除法算法"><a href="#2-证明除法算法" class="headerlink" title="2. 证明除法算法"></a>2. 证明除法算法</h1><h2 id="2-1-除法算法"><a href="#2-1-除法算法" class="headerlink" title="2.1 除法算法"></a>2.1 除法算法</h2><p><strong>对任意给定的整数a和b，其中b &gt; 0，存在唯一的整数对q（商）和r（余数）使得， </strong></p>
 <script type="math/tex; mode=display">
 a = qb + r</script><p><strong>且 0 ≤ r &lt; b。</strong></p>
@@ -299,120 +305,9 @@ b\mid(r_2-r_1)\\</script><p>又</p>
 \therefore -b<r_2-r_1<b\\
 \therefore r_2-r_1 = 0</script><p>与假设不符，故只存在一对<script type="math/tex">(q,r)\ s.t.\ 0\leq r < b\ 且\ a=qb+r</script></p>
 <p>Q.E.D</p>
-<h1 id="3-程序"><a href="#3-程序" class="headerlink" title="3. 程序"></a>3. 程序</h1><h2 id="3-1-迭代版本的gcd"><a href="#3-1-迭代版本的gcd" class="headerlink" title="3.1 迭代版本的gcd"></a>3.1 迭代版本的gcd</h2><pre><code class="lang-c">#define _CRT_SECURE_NO_WARNINGS 1
-#include &lt;stdio.h&gt;
-
-int gcd(int a, int b);
-
-int main()
-&#123;
-    int a, b;
-    printf(&quot;请输入a,b\n&quot;);
-    scanf(&quot;%d,%d&quot;,&amp;a,&amp;b);
-    printf(&quot;a和b最大公因数为：%d&quot;, gcd(a, b));
-    return 0;
-&#125;
-
-int gcd(int a, int b)
-&#123;
-    int temp;
-    if (a &lt; b)
-    &#123;
-        temp = b;
-        b = a;
-        a = temp;
-    &#125;
-    while (a % b)
-    &#123;
-        temp = b;
-        b = a % b;
-        a = temp;
-    &#125;
-    return b;
-&#125;
-</code></pre>
-<h2 id="3-2-迭代版本的egcd"><a href="#3-2-迭代版本的egcd" class="headerlink" title="3.2 迭代版本的egcd"></a>3.2 迭代版本的egcd</h2><pre><code class="lang-c">#define _CRT_SECURE_NO_WARNINGS 1
-#include &lt;stdio.h&gt;
-
-// ra+sb = gcd(a,b)
-void egcd(int a, int b);
-
-int main()
-&#123;
-    int a, b;
-    printf(&quot;请输入a,b\n&quot;);
-    scanf(&quot;%d,%d&quot;, &amp;a, &amp;b);
-    egcd(a, b);
-    return 0;
-&#125;
-
-void egcd(int a, int b)
-&#123;
-    int s1 = 1;
-    int r0 = 1;
-    int s0 = 0;
-    int r1 = 0;
-    int q;
-    int temp;
-    int res_r;
-    int res_s;
-    int res_gcd;
-    while (b)
-    &#123;
-        q = a / b;
-        temp = a;
-        a = b;
-        b = temp % b;
-        temp = r0;
-        r0 = r1;
-        r1 = temp - q * r1;
-        temp = s0;
-        s0 = s1;
-        s1 = temp - q * s1;
-    &#125;
-    res_r = r0;
-    res_s = s0;
-    res_gcd = a;
-    printf(&quot;r=%d,s=%d,gcd(a,b)=%d&quot;, res_r, res_s, res_gcd);
-&#125;
-</code></pre>
-<h2 id="3-3-基于gcd算法实现的函数"><a href="#3-3-基于gcd算法实现的函数" class="headerlink" title="3.3 基于gcd算法实现的函数"></a>3.3 基于gcd算法实现的函数</h2><pre><code class="lang-c">#define _CRT_SECURE_NO_WARNINGS 1
-#include &lt;stdio.h&gt;
-
-int gcd(int a, int b);
-int main()
-&#123;
-    int n;
-    printf(&quot;请输入n\n&quot;);
-    scanf(&quot;%d&quot;, &amp;n);
-    int count = 0;
-    for (int i = 1; i &lt; n; i++)
-    &#123;
-        if (gcd(n, i) == 1) count++;
-
-    &#125;
-    printf(&quot;%d&quot;, count);
-    return 0;
-&#125;
-
-int gcd(int a, int b)
-&#123;
-    int temp;
-    if (a &lt; b)
-    &#123;
-        temp = b;
-        b = a;
-        a = temp;
-    &#125;
-    while (a % b)
-    &#123;
-        temp = b;
-        b = a % b;
-        a = temp;
-    &#125;
-    return b;
-&#125;
-</code></pre>
+<h1 id="3-程序"><a href="#3-程序" class="headerlink" title="3. 程序"></a>3. 程序</h1><h2 id="3-1-迭代版本的gcd"><a href="#3-1-迭代版本的gcd" class="headerlink" title="3.1 迭代版本的gcd"></a>3.1 迭代版本的gcd</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">gcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>	<span class="hljs-type">int</span> a, b;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;请输入a,b\n&quot;</span>);<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d,%d&quot;</span>,&amp;a,&amp;b);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a和b最大公因数为：%d&quot;</span>, gcd(a, b));<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">gcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span><br>&#123;<br>	<span class="hljs-type">int</span> temp;<br>	<span class="hljs-keyword">if</span> (a &lt; b)<br>	&#123;<br>		temp = b;<br>		b = a;<br>		a = temp;<br>	&#125;<br>	<span class="hljs-keyword">while</span> (a % b)<br>	&#123;<br>		temp = b;<br>		b = a % b;<br>		a = temp;<br>	&#125;<br>	<span class="hljs-keyword">return</span> b;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="3-2-迭代版本的egcd"><a href="#3-2-迭代版本的egcd" class="headerlink" title="3.2 迭代版本的egcd"></a>3.2 迭代版本的egcd</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-comment">// ra+sb = gcd(a,b)</span><br><span class="hljs-type">void</span> <span class="hljs-title function_">egcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>	<span class="hljs-type">int</span> a, b;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;请输入a,b\n&quot;</span>);<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d,%d&quot;</span>, &amp;a, &amp;b);<br>	egcd(a, b);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">egcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span><br>&#123;<br>	<span class="hljs-type">int</span> s1 = <span class="hljs-number">1</span>;<br>	<span class="hljs-type">int</span> r0 = <span class="hljs-number">1</span>;<br>	<span class="hljs-type">int</span> s0 = <span class="hljs-number">0</span>;<br>	<span class="hljs-type">int</span> r1 = <span class="hljs-number">0</span>;<br>	<span class="hljs-type">int</span> q;<br>	<span class="hljs-type">int</span> temp;<br>	<span class="hljs-type">int</span> res_r;<br>	<span class="hljs-type">int</span> res_s;<br>	<span class="hljs-type">int</span> res_gcd;<br>	<span class="hljs-keyword">while</span> (b)<br>	&#123;<br>		q = a / b;<br>		temp = a;<br>		a = b;<br>		b = temp % b;<br>		temp = r0;<br>		r0 = r1;<br>		r1 = temp - q * r1;<br>		temp = s0;<br>		s0 = s1;<br>		s1 = temp - q * s1;<br>	&#125;<br>	res_r = r0;<br>	res_s = s0;<br>	res_gcd = a;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;r=%d,s=%d,gcd(a,b)=%d&quot;</span>, res_r, res_s, res_gcd);<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="3-3-基于gcd算法实现的函数"><a href="#3-3-基于gcd算法实现的函数" class="headerlink" title="3.3 基于gcd算法实现的函数"></a>3.3 基于gcd算法实现的函数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">gcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;<br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>	<span class="hljs-type">int</span> n;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;请输入n\n&quot;</span>);<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>	<span class="hljs-type">int</span> count = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; n; i++)<br>	&#123;<br>		<span class="hljs-keyword">if</span> (gcd(n, i) == <span class="hljs-number">1</span>) count++;<br><br>	&#125;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, count);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">gcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span><br>&#123;<br>	<span class="hljs-type">int</span> temp;<br>	<span class="hljs-keyword">if</span> (a &lt; b)<br>	&#123;<br>		temp = b;<br>		b = a;<br>		a = temp;<br>	&#125;<br>	<span class="hljs-keyword">while</span> (a % b)<br>	&#123;<br>		temp = b;<br>		b = a % b;<br>		a = temp;<br>	&#125;<br>	<span class="hljs-keyword">return</span> b;<br>&#125;<br></code></pre></td></tr></table></figure>
 <h1 id="4-第二章的第6、8题"><a href="#4-第二章的第6、8题" class="headerlink" title="4. 第二章的第6、8题"></a>4. 第二章的第6、8题</h1><h2 id="4-1-第6题"><a href="#4-1-第6题" class="headerlink" title="4.1 第6题"></a>4.1 第6题</h2><ul>
 <li>假设<script type="math/tex">g^a\equiv1\ (mod\ m)\ 且\ g^b\equiv 1(mod\ m)</script>,请证明：<script type="math/tex">g^{gcd(a,b)}\equiv 1(mod\ m)</script>。</li>
 </ul>
@@ -464,190 +359,366 @@ b=t_2d\\</script><script type="math/tex; mode=display">\because$$ 假设 $$gcd(t
 易知：$$a=b=d</script><p>则 <script type="math/tex">gcd(a/d,b/d)= gcd(1,1)=1</script></p>
 <p>Q.E.D</p>
 
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/CINTA/" class="category-chain-item">CINTA</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
     </div>
-</article>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Learning/" class="print-no-link">#Learning</a>
+      
+    </div>
+  
+</div>
 
 
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>CINTA-ONE-2023.09.14</div>
+      <div>http://example.com/2023/09/15/CINTA-ONE/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Cvmax7</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年9月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/08/29/CINTA%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A-2023.08.29/" title="CINTA暑假作业-2023.08.29">
+                        <span class="hidden-mobile">CINTA暑假作业-2023.08.29</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
                 </div>
-                <aside class="col-md-4 gal-left" id="sidebar">
-    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
-<aside id="sidebar-search">
-    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <form class="form-inline clearfix" id="search-form" method="get"
-              action="/search/index.html">
-            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
-            <button class="btn btn-danger btn-gal" type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </form>
-    </div>
-</aside>
-    <aside id="sidebar-author">
-    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
-        <div class="panel-heading" style="text-align: center">
-            <i class="fa fa-quote-left"></i>
-            Cvmax7
-            <i class="fa fa-quote-right"></i>
-        </div>
-        <div class="author-panel text-center">
-            <img src="/imgs/avatar.jpg" width="140" height="140"
-                 alt="个人头像" class="author-image">
-            <p class="author-description"><p>SCNU-Network Engineering Class2-WZH</p>
-</p>
-        </div>
-    </div>
-</aside>
-    
-    <aside id="sidebar-recent_comments">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-comments"></i>
-            最新评论
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush"></ul>
-    </div>
-</aside>
-    
-    <!-- 要配置好leancloud才能开启此小工具 -->
-    
-    
-    <aside id="sidebar-recent_posts">
-    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-        <div class="panel-heading">
-            <i class="fa fa-refresh"></i>
-            近期文章
-            <i class="fa fa-times-circle panel-remove"></i>
-            <i class="fa fa-chevron-circle-up panel-toggle"></i>
-        </div>
-        <ul class="list-group list-group-flush">
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2023/09/15/CINTA-ONE/">CINTA-ONE-2023.09.14</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2023/08/29/CINTA%E6%9A%91%E5%81%87%E4%BD%9C%E4%B8%9A-2023.08.29/">CINTA暑假作业-2023.08.29</a>
-                </span>
-            </li>
-            
-        </ul>
-    </div>
-</aside>
-    
-    
-    
-    <aside id="gal-sets">
-        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
-            <ul class="nav nav-pills pills-gal">
-
-                
-                <li>
-                    <a href="/2023/09/15/CINTA-ONE/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
-                </li>
-                
-                
-                
-                <li>
-                    <a href="/2023/09/15/CINTA-ONE/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
-                </li>
-                
-            </ul>
-            <div class="tab-content">
-                
-                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
-    
-    <a href="/tags/Learning/" style="font-size: 9.49165312289545px;" class="tag-cloud-link">Learning</a>
-    
-</div>
-                
-                
-                
-                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
-    
-    <li>
-        <a href="https://github.com/Cvmax7" target="_blank">Github</a>
-    </li>
-    
-</div>
-                
+              
             </div>
-        </div>
-    </aside>
-    
-</aside>
-            </div>
-        </div>
-    </div>
-    <footer id="gal-footer">
-    <div class="container">
-        Copyright © 2018 Cvmax7 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
-    </div>
-</footer>
 
-<!-- 回到顶端 -->
-<div id="gal-gotop">
-    <i class="fa fa-angle-up"></i>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
 </div>
-</body>
 
-<script src="/js/activate-power-mode.js"></script>
 
-<script>
 
-    // 配置highslide
-	hs.graphicsDir = '/js/highslide/graphics/'
-    hs.outlineType = "rounded-white";
-    hs.dimmingOpacity = 0.8;
-    hs.outlineWhileAnimating = true;
-    hs.showCredits = false;
-    hs.captionEval = "this.thumb.alt";
-    hs.numberPosition = "caption";
-    hs.align = "center";
-    hs.transitions = ["expand", "crossfade"];
-    hs.lang.number = '共%2张图, 当前是第%1张';
-    hs.addSlideshow({
-      interval: 5000,
-      repeat: true,
-      useControls: true,
-      fixedControls: "fit",
-      overlayOptions: {
-        opacity: 0.75,
-        position: "bottom center",
-        hideOnMouseOut: true
-      }
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
     })
+  </script>
 
-    // 初始化aos
-    AOS.init({
-      duration: 1000,
-      delay: 0,
-      easing: 'ease-out-back'
-    });
 
-</script>
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
 <script>
-	POWERMODE.colorful = 'false';    // make power mode colorful
-	POWERMODE.shake = 'false';       // turn off shake
-	// TODO 这里根据具体情况修改
-	document.body.addEventListener('input', POWERMODE);
-</script>
-<script>
-    window.slideConfig = {
-      prefix: '/imgs/slide/background',
-      ext: 'jpg',
-      maxCount: '9'
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
     }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
 </script>
 
-<script src="/js/hs.js"></script>
-<script src="/js/blog.js"></script>
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
 </html>
