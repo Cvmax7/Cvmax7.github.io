@@ -1,0 +1,811 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Cvmax7">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="CINTA-ONE 1. 迭代版本的简单乘法 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#define _CRT_SECURE_NO_WARNINGS 1#include &amp;l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CINTA-ONE">
+<meta property="og:url" content="http://example.com/2023/09/16/CINTA-ONE/index.html">
+<meta property="og:site_name" content="Cvmax7">
+<meta property="og:description" content="CINTA-ONE 1. 迭代版本的简单乘法 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#define _CRT_SECURE_NO_WARNINGS 1#include &amp;l">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-16T07:04:50.000Z">
+<meta property="article:modified_time" content="2023-09-16T07:55:04.764Z">
+<meta property="article:author" content="Cvmax7">
+<meta property="article:tag" content="Learning">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>CINTA-ONE - Cvmax7</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="CINTA-ONE"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-09-16 15:04" pubdate>
+          2023年9月16日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          38 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">CINTA-ONE</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="cinta-one">CINTA-ONE</h1>
+<h1 id="迭代版本的简单乘法">1. 迭代版本的简单乘法</h1>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-comment">// 简单乘法</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">multiply1</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;<br><br><span class="hljs-comment">// 简单乘法的第二种思路</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">multiply2</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;<br><br><span class="hljs-comment">// 迭代version的简单乘法</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">multiply3</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;<br><br><span class="hljs-comment">// 判断一个数是否为偶数</span><br><span class="hljs-type">bool</span> <span class="hljs-title function_">Iseven</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br><br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;乘积为：%d\n&quot;</span>, multiply1(<span class="hljs-number">19</span>, <span class="hljs-number">20</span>));<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;乘积为：%d\n&quot;</span>, multiply2(<span class="hljs-number">19</span>, <span class="hljs-number">20</span>));<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;乘积为：%d\n&quot;</span>, multiply3(<span class="hljs-number">19</span>, <span class="hljs-number">20</span>));<br><br><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">multiply1</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span><br>&#123;<br>	<span class="hljs-keyword">if</span> (b == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> a + multiply1(a, b - <span class="hljs-number">1</span>);<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">multiply2</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span><br>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; b; i++)<br>	&#123;<br>		res += a;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">multiply3</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span><br>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">if</span> (Iseven(b) == <span class="hljs-number">1</span>)<br>	&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; (b / <span class="hljs-number">2</span>); i++)<br>		&#123;<br>			res += a;<br>		&#125;<br>		res *= <span class="hljs-number">2</span>;<br>		<span class="hljs-keyword">return</span> res;<br>	&#125;<br>	<span class="hljs-keyword">else</span><br>	&#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; (b / <span class="hljs-number">2</span>); i++)<br>		&#123;<br>			res += a;<br>		&#125;<br>		res *= <span class="hljs-number">2</span>;<br>		res += a;<br>		<span class="hljs-keyword">return</span> res;<br>	&#125;<br>&#125;<br><br><span class="hljs-type">bool</span> <span class="hljs-title function_">Iseven</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span><br>&#123;<br>	<span class="hljs-keyword">if</span> (a % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>	<span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="证明除法算法">2. 证明除法算法</h1>
+<h2 id="除法算法">2.1 除法算法</h2>
+<p><strong>对任意给定的整数a和b，其中b &gt;
+0，存在唯一的整数对q（商）和r（余数）使得， </strong> <span
+class="math display">\[
+a = qb + r
+\]</span> <strong>且 0 ≤ r &lt; b。</strong></p>
+<h2 id="证明过程">2.2 证明过程</h2>
+<h3 id="证明存在性">2.2.1 证明存在性</h3>
+<p>构造集合 <span class="math display">\[
+S = \{a-bk:k\in Z\ 且\  a-bk \ge 0 \}
+\]</span> 显然，集合S非空，由良序原则，存在一个最小元<span
+class="math display">\[r \in S\  且 \ r=a-qb\]</span></p>
+<p>因此，<span class="math display">\[a = qb + r, r\ge 0\]</span></p>
+<p>我们采用反证法，假设最小元r&gt;b，则</p>
+<p><span class="math display">\[\exists t\in Z\   s.t.\ r = tb +
+r^*\]</span></p>
+<p>则有 <span class="math display">\[
+a=qb+r=qb+tb+r^*=(q+t)b+r^*
+\]</span> 令 <span class="math display">\[ q+t = q^* \in Z\]</span> 则有
+<span class="math display">\[
+a=q^*b+r^*
+\]</span> <span
+class="math display">\[此时存在r^*&lt;r,则此时的最小元为r^*,与假设矛盾.\]</span></p>
+<p><span class="math display">\[综上:0\leq r&lt; b\]</span></p>
+<p>Q.E.D</p>
+<h3 id="证明唯一性">2.2.2 证明唯一性</h3>
+<p><span
+class="math display">\[我们才用反证法，假设存在两对(q_1,r_1)(q_2,r_2)\]</span>
+满足<span class="math display">\[a=qb+r\]</span> 其中<span
+class="math display">\[q_1\ne q_2,\ r_1\ne r_2,\ 0\leq r_1 &lt; b,\
+0\leq r_2 &lt; b\]</span>则有： <span class="math display">\[
+q_1b+r_1=q_2b+r_2
+\]</span> 处理得： <span class="math display">\[
+(q_1-q_2)b=(r_2-r_1)
+\]</span> 即 <span class="math display">\[
+b\mid(r_2-r_1)\\
+\]</span> 又 <span class="math display">\[
+\because 0\leq r_1 &lt; b,\ 0\leq r_2 &lt; b\\
+\]</span> <span class="math display">\[
+\therefore -b&lt;r_2-r_1&lt;b
+\]</span></p>
+<p><span class="math display">\[
+\therefore r_2-r_1 = 0
+\]</span></p>
+<p><span class="math display">\[与假设不符，故只存在一对(q,r)\ s.t.\
+0\leq r &lt; b\ 且\ a=qb+r\]</span></p>
+<p>Q.E.D</p>
+<h1 id="程序">3. 程序</h1>
+<h2 id="迭代版本的gcd">3.1 迭代版本的gcd</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">gcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>	<span class="hljs-type">int</span> a, b;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;请输入a,b\n&quot;</span>);<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d,%d&quot;</span>,&amp;a,&amp;b);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a和b最大公因数为：%d&quot;</span>, gcd(a, b));<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">gcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span><br>&#123;<br>	<span class="hljs-type">int</span> temp;<br>	<span class="hljs-keyword">if</span> (a &lt; b)<br>	&#123;<br>		temp = b;<br>		b = a;<br>		a = temp;<br>	&#125;<br>	<span class="hljs-keyword">while</span> (a % b)<br>	&#123;<br>		temp = b;<br>		b = a % b;<br>		a = temp;<br>	&#125;<br>	<span class="hljs-keyword">return</span> b;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="迭代版本的egcd">3.2 迭代版本的egcd</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-comment">// ra+sb = gcd(a,b)</span><br><span class="hljs-type">void</span> <span class="hljs-title function_">egcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>	<span class="hljs-type">int</span> a, b;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;请输入a,b\n&quot;</span>);<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d,%d&quot;</span>, &amp;a, &amp;b);<br>	egcd(a, b);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-type">void</span> <span class="hljs-title function_">egcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span><br>&#123;<br>	<span class="hljs-type">int</span> s1 = <span class="hljs-number">1</span>;<br>	<span class="hljs-type">int</span> r0 = <span class="hljs-number">1</span>;<br>	<span class="hljs-type">int</span> s0 = <span class="hljs-number">0</span>;<br>	<span class="hljs-type">int</span> r1 = <span class="hljs-number">0</span>;<br>	<span class="hljs-type">int</span> q;<br>	<span class="hljs-type">int</span> temp;<br>	<span class="hljs-type">int</span> res_r;<br>	<span class="hljs-type">int</span> res_s;<br>	<span class="hljs-type">int</span> res_gcd;<br>	<span class="hljs-keyword">while</span> (b)<br>	&#123;<br>		q = a / b;<br>		temp = a;<br>		a = b;<br>		b = temp % b;<br>		temp = r0;<br>		r0 = r1;<br>		r1 = temp - q * r1;<br>		temp = s0;<br>		s0 = s1;<br>		s1 = temp - q * s1;<br>	&#125;<br>	res_r = r0;<br>	res_s = s0;<br>	res_gcd = a;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;r=%d,s=%d,gcd(a,b)=%d&quot;</span>, res_r, res_s, res_gcd);<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="基于gcd算法实现的函数">3.3 基于gcd算法实现的函数</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-type">int</span> <span class="hljs-title function_">gcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span>;<br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>	<span class="hljs-type">int</span> n;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;请输入n\n&quot;</span>);<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>	<span class="hljs-type">int</span> count = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; n; i++)<br>	&#123;<br>		<span class="hljs-keyword">if</span> (gcd(n, i) == <span class="hljs-number">1</span>) count++;<br><br>	&#125;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>, count);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">gcd</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span><br>&#123;<br>	<span class="hljs-type">int</span> temp;<br>	<span class="hljs-keyword">if</span> (a &lt; b)<br>	&#123;<br>		temp = b;<br>		b = a;<br>		a = temp;<br>	&#125;<br>	<span class="hljs-keyword">while</span> (a % b)<br>	&#123;<br>		temp = b;<br>		b = a % b;<br>		a = temp;<br>	&#125;<br>	<span class="hljs-keyword">return</span> b;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="第二章的第68题">4. 第二章的第6、8题</h1>
+<h2 id="第6题">4.1 第6题</h2>
+<ul>
+<li><span class="math display">\[假设g^a\equiv1\ (mod\ m)\ 且\ g^b\equiv
+1(mod\ m),请证明：g^{gcd(a,b)}\equiv 1(mod\ m).\]</span></li>
+</ul>
+<hr />
+<p>证明：</p>
+<p><span class="math display">\[由B\acute{e}zout定理可得：\]</span>
+<span class="math display">\[
+gcd(a,b)=ar+bs
+\]</span> 且a与b的最大公因子是唯一的。</p>
+<p>即证： <span class="math display">\[
+g^{ar＋bs}\equiv1(mod\ m)\\
+\]</span> 又 <span class="math display">\[
+g^a\equiv1\ (mod\ m)\ \Rightarrow\ g^a=k_1m+1\\
+g^b\equiv1\ (mod\ m)\ \Rightarrow\ g^b=k_2m+1
+\]</span> 又 <span class="math display">\[
+g^a·g^b = (k_1m+1)·(k_2m+1)=k_1k_2m+k_1m+k_2m+1\\
+(g^a·g^b)\ mod\ m =(k_1k_2m+k_1m+k_2m+1)\ mod\ m =1
+\]</span> 故 <span class="math display">\[
+g^{a+b}\equiv1(mod\ m)
+\]</span> 即证： <span class="math display">\[
+(g^a)^r\equiv 1(mod\ m)\\
+(g^b)^s\equiv 1(mod\ m)
+\]</span></p>
+<p><span class="math display">\[
+\because(g^a)^r=(k_1m+1)^r=C_r^0(k_1m)^r1^0+C_r^1(k_1m)^{r-1}1^1+...+C_r^{r-1}(k_1m)^11^{r-1}+C_r^r(k_1m)^01^r\\
+\ \ \ \ \
+(g^b)^s=(k_2m+1)^s=C_s^0(k_2m)^s1^0+C_s^1(k_2m)^{s-1}1^1+...+C_s^{s-1}(k_2m)^11^{s-1}+C_s^s(k_2m)^01^s\\
+\]</span></p>
+<p>显然， <span class="math display">\[
+[C_r^0(k_1m)^r1^0+C_r^1(k_1m)^{r-1}1^1+...+C_r^{r-1}(k_1m)^11^{r-1}+C_r^r(k_1m)^01^r]
+\ mod\ m =\ C_r^r(k_1m)^01^r\ mod\ m=1
+\]</span></p>
+<p><span class="math display">\[
+\therefore (g^a)^r\equiv 1(mod\ m)\\
+\]</span></p>
+<p>同理可得： <span class="math display">\[
+(g^b)^s\equiv 1(mod\ m)
+\]</span></p>
+<p><span class="math display">\[
+\therefore (g^a)^r·(g^b)^s \equiv 1(mod\ m) \Leftrightarrow
+g^{ar＋bs}\equiv1(mod\ m)\Leftrightarrow g^{gcd(a,b)}\equiv1(mod\ m)
+\]</span></p>
+<p>Q.E.D</p>
+<h2 id="第8题">4.2 第8题</h2>
+<ul>
+<li><span
+class="math display">\[证明：如果gcd(a,b)=d,则gcd(a/d,b/d)=1\]</span></li>
+</ul>
+<hr />
+<p>证明：</p>
+<p><span class="math display">\[\because gcd(a,b)=d\]</span>
+可知a与b的最大公因数为d。</p>
+<p><span class="math display">\[Ⅰ.当a\neq b时\]</span></p>
+<p><span class="math display">\[设\exists t_1,t_2 \in Z\ 且 t_1\neq t_2
+\neq 0\ ,\ s.t.\]</span> <span class="math display">\[
+a=t_1d\\
+b=t_2d\\
+\]</span> <span class="math display">\[假设gcd(t_1,t_2)=k\neq
+1,则必\exists d^* = kd,s.t.\ d^*&gt;d,与题意不符\]</span></p>
+<p><span class="math display">\[即t_1与t_2互素\]</span></p>
+<p>又： <span class="math display">\[
+a/d = t_1\\
+b/d = t_2
+\]</span> <span class="math display">\[故gcd(a/d,b/d)=1\]</span>。</p>
+<p><span class="math display">\[Ⅱ.当a=b时\]</span></p>
+<p>易知：<span class="math display">\[a=b=d\]</span></p>
+<p><span class="math display">\[则gcd(a/d,b/d)= gcd(1,1)=1\]</span></p>
+<p>Q.E.D</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/CINTA/" class="category-chain-item">CINTA</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Learning/" class="print-no-link">#Learning</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>CINTA-ONE</div>
+      <div>http://example.com/2023/09/16/CINTA-ONE/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Cvmax7</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年9月16日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
