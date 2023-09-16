@@ -24,7 +24,7 @@
 <meta property="og:description" content="CINTA-ONE 1. 迭代版本的简单乘法 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#define _CRT_SECURE_NO_WARNINGS 1#include &amp;l">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-16T07:04:50.000Z">
-<meta property="article:modified_time" content="2023-09-16T07:37:51.983Z">
+<meta property="article:modified_time" content="2023-09-16T07:51:15.297Z">
 <meta property="article:author" content="Cvmax7">
 <meta property="article:tag" content="Learning">
 <meta name="twitter:card" content="summary_large_image">
@@ -286,31 +286,28 @@ a = qb + r
 <h2 id="证明过程">2.2 证明过程</h2>
 <h3 id="证明存在性">2.2.1 证明存在性</h3>
 <p>构造集合 <span class="math display">\[
-S = \{a-bk:k\in \Z\ 且\  a-bk \ge 0 \}
+S = \{a-bk:k\in Z\ 且\  a-bk \ge 0 \}
 \]</span> 显然，集合S非空，由良序原则，存在一个最小元<span
 class="math display">\[r \in S\  且 \ r=a-qb\]</span></p>
 <p>因此，<span class="math display">\[a = qb + r, r\ge 0\]</span></p>
 <p>我们采用反证法，假设最小元r&gt;b，则</p>
-<p><span class="math display">\[\exists t\in Z\   s.t.\]</span> <span
-class="math display">\[
-r = tb + r^*
-\]</span> 则有 <span class="math display">\[
+<p><span class="math display">\[\exists t\in Z\   s.t.\ r = tb +
+r^*\]</span></p>
+<p>则有 <span class="math display">\[
 a=qb+r=qb+tb+r^*=(q+t)b+r^*
 \]</span> 令 <span class="math display">\[ q+t = q^* \in Z\]</span> 则有
 <span class="math display">\[
 a=q^*b+r^*
-\]</span> 此时存在<span class="math display">\[r^*&lt;r\]</span>
-则此时的最小元为<span class="math display">\[r^*\]</span>
-与假设矛盾。</p>
-<p>综上: <span class="math display">\[0\leq r&lt; b\]</span></p>
+\]</span> <span
+class="math display">\[此时存在r^*&lt;r,则此时的最小元为r^*,与假设矛盾.\]</span></p>
+<p><span class="math display">\[综上:0\leq r&lt; b\]</span></p>
 <p>Q.E.D</p>
 <h3 id="证明唯一性">2.2.2 证明唯一性</h3>
-<p>我们才用反证法，假设存在两对<span
-class="math display">\[(q_1,r_1)\]</span> <span
-class="math display">\[(q_2,r_2)\]</span> 满足<span
-class="math display">\[a=qb+r\]</span> 其中<span
+<p><span
+class="math display">\[我们才用反证法，假设存在两对(q_1,r_1)(q_2,r_2)\]</span>
+满足<span class="math display">\[a=qb+r\]</span> 其中<span
 class="math display">\[q_1\ne q_2,\ r_1\ne r_2,\ 0\leq r_1 &lt; b,\
-0\leq r_2 &lt; b\]</span> 则有： <span class="math display">\[
+0\leq r_2 &lt; b\]</span>则有： <span class="math display">\[
 q_1b+r_1=q_2b+r_2
 \]</span> 处理得： <span class="math display">\[
 (q_1-q_2)b=(r_2-r_1)
@@ -324,7 +321,7 @@ b\mid(r_2-r_1)\\
 <p><span class="math display">\[
 \therefore r_2-r_1 = 0
 \]</span></p>
-<p>与假设不符，故只存在一对<span class="math display">\[(q,r)\ s.t.\
+<p><span class="math display">\[与假设不符，故只存在一对(q,r)\ s.t.\
 0\leq r &lt; b\ 且\ a=qb+r\]</span></p>
 <p>Q.E.D</p>
 <h1 id="程序">3. 程序</h1>
@@ -337,12 +334,11 @@ b\mid(r_2-r_1)\\
 <h1 id="第二章的第68题">4. 第二章的第6、8题</h1>
 <h2 id="第6题">4.1 第6题</h2>
 <ul>
-<li>假设<span class="math display">\[g^a\equiv1\ (mod\ m)\ 且\ g^b\equiv
-1(mod\ m)\]</span>,请证明：<span
-class="math display">\[g^{gcd(a,b)}\equiv 1(mod\ m)\]</span>。</li>
+<li><span class="math display">\[假设g^a\equiv1\ (mod\ m)\ 且\ g^b\equiv
+1(mod\ m),请证明：g^{gcd(a,b)}\equiv 1(mod\ m).\]</span></li>
 </ul>
 <p>证明：</p>
-<p>由<span class="math display">\[B\acute{e}zout\]</span>定理可得：
+<p><span class="math display">\[由B\acute{e}zout定理可得：\]</span>：
 <span class="math display">\[
 gcd(a,b)=ar+bs
 \]</span> 且a与b的最大公因子是唯一的。</p>
@@ -351,7 +347,7 @@ g^{ar＋bs}\equiv1(mod\ m)\\
 \]</span> 又 <span class="math display">\[
 g^a\equiv1\ (mod\ m)\ \Rightarrow\ g^a=k_1m+1\\
 g^b\equiv1\ (mod\ m)\ \Rightarrow\ g^b=k_2m+1
-\]</span> 又： <span class="math display">\[
+\]</span> 又 <span class="math display">\[
 g^a·g^b = (k_1m+1)·(k_2m+1)=k_1k_2m+k_1m+k_2m+1\\
 (g^a·g^b)\ mod\ m =(k_1k_2m+k_1m+k_2m+1)\ mod\ m =1
 \]</span> 故 <span class="math display">\[
@@ -382,30 +378,27 @@ g^{ar＋bs}\equiv1(mod\ m)\Leftrightarrow g^{gcd(a,b)}\equiv1(mod\ m)
 <p>Q.E.D</p>
 <h2 id="第8题">4.2 第8题</h2>
 <ul>
-<li>证明：如果<span class="math display">\[gcd(a,b)=d\]</span>,则<span
-class="math display">\[gcd(a/d,b/d)=1\]</span></li>
+<li><span
+class="math display">\[证明：如果gcd(a,b)=d,则gcd(a/d,b/d)=1\]</span></li>
 </ul>
 <p>证明：</p>
-<p>因为<span
-class="math display">\[gcd(a,b)=d\]</span>，可知a与b的最大公因数为d。</p>
-<p>Ⅰ.当<span class="math display">\[a\neq b\]</span>时</p>
-<p>设 <span class="math display">\[\exists t_1,t_2 \in Z\ 且 t_1\neq t_2
+<p><span class="math display">\[\because gcd(a,b)=d\]</span>
+可知a与b的最大公因数为d。</p>
+<p><span class="math display">\[Ⅰ.当a\neq b时\]</span></p>
+<p><span class="math display">\[设\exists t_1,t_2 \in Z\ 且 t_1\neq t_2
 \neq 0\ ,\ s.t.\]</span> <span class="math display">\[
 a=t_1d\\
 b=t_2d\\
-\]</span> <span class="math display">\[\because\]</span> 假设 <span
-class="math display">\[gcd(t_1,t_2)=k\neq 1\]</span> 则必<span
-class="math display">\[\exists d^* = kd,s.t.\ d^*&gt;d\]</span>
-与题意不符，故<span class="math display">\[gcd(t_1,t_2)=1\]</span></p>
-<p>即<span class="math display">\[t_1\]</span>与<span
-class="math display">\[t_2\]</span>互素。</p>
+\]</span> <span class="math display">\[假设gcd(t_1,t_2)=k\neq
+1,则必\exists d^* = kd,s.t.\ d^*&gt;d,与题意不符\]</span></p>
+<p><span class="math display">\[即t_1与t_2互素\]</span></p>
 <p>又： <span class="math display">\[
 a/d = t_1\\
 b/d = t_2
-\]</span> 故 <span class="math display">\[gcd(a/d,b/d)=1\]</span>。</p>
-<p>Ⅱ.当<span class="math display">\[a=b\]</span>时</p>
+\]</span> <span class="math display">\[故gcd(a/d,b/d)=1\]</span>。</p>
+<p><span class="math display">\[Ⅱ.当a=b时\]</span></p>
 <p>易知：<span class="math display">\[a=b=d\]</span></p>
-<p>则 <span class="math display">\[gcd(a/d,b/d)= gcd(1,1)=1\]</span></p>
+<p><span class="math display">\[则gcd(a/d,b/d)= gcd(1,1)=1\]</span></p>
 <p>Q.E.D</p>
 
                 
