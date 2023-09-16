@@ -199,7 +199,7 @@
         </center>
     </div>
     <div class="content-article">
-        <h1 id="CINTA-ONE"><a href="#CINTA-ONE" class="headerlink" title="CINTA-ONE"></a>CINTA-ONE</h1><h1 id="1-迭代版本的简单乘法"><a href="#1-迭代版本的简单乘法" class="headerlink" title="1. 迭代版本的简单乘法"></a>1. 迭代版本的简单乘法</h1><pre><code class="c">#define _CRT_SECURE_NO_WARNINGS 1
+        <h1 id="CINTA-ONE"><a href="#CINTA-ONE" class="headerlink" title="CINTA-ONE"></a>CINTA-ONE</h1><h1 id="1-迭代版本的简单乘法"><a href="#1-迭代版本的简单乘法" class="headerlink" title="1. 迭代版本的简单乘法"></a>1. 迭代版本的简单乘法</h1><pre><code class="lang-c">#define _CRT_SECURE_NO_WARNINGS 1
 #include &lt;stdio.h&gt;
 
 // 简单乘法
@@ -271,16 +271,35 @@ bool Iseven(int a)
 &#125;
 </code></pre>
 <p>运行结果如下：<img src="C:\Users\27644\AppData\Roaming\Typora\typora-user-images\image-20230913234217849.png" alt="image-20230913234217849"></p>
-<h1 id="2-证明除法算法"><a href="#2-证明除法算法" class="headerlink" title="2. 证明除法算法"></a>2. 证明除法算法</h1><h2 id="2-1-除法算法"><a href="#2-1-除法算法" class="headerlink" title="2.1 除法算法"></a>2.1 除法算法</h2><p>**对任意给定的整数a和b，其中b &gt; 0，存在唯一的整数对q（商）和r（余数）使得， **<br>$$<br>a &#x3D; qb + r<br>$$<br><strong>且 0 ≤ r &lt; b。</strong></p>
-<h2 id="2-2-证明过程"><a href="#2-2-证明过程" class="headerlink" title="2.2 证明过程"></a>2.2 证明过程</h2><h3 id="2-2-1-证明存在性"><a href="#2-2-1-证明存在性" class="headerlink" title="2.2.1 证明存在性"></a>2.2.1 证明存在性</h3><p>构造集合<br>$$<br>S &#x3D; {a-bk:k\in \Z\ 且\  a-bk \ge 0 }<br>$$<br>显然，集合S非空，由良序原则，存在一个最小元$$r \in S\  且 \ r&#x3D;a-qb$$</p>
-<p>因此，$$a &#x3D; qb + r, r\ge 0$$。</p>
-<p>我们采用反证法，假设最小元$$r&gt;b$$，则</p>
-<p>$$\exists t\in\Z\   s.t.$$<br>$$<br>r &#x3D; tb + r^*<br>$$<br>则有<br>$$<br>a&#x3D;qb+r&#x3D;qb+tb+r^*&#x3D;(q+t)b+r^*<br>$$<br>令 $$ q+t &#x3D; q^* \in Z$$，则有<br>$$<br>a&#x3D;q^<em>b+r^</em><br>$$<br>此时存在$$r^*&lt;r$$,则此时的最小元为$$r^*$$,与假设矛盾。</p>
-<p>综上: $$0\leq r&lt; b$$</p>
+<h1 id="2-证明除法算法"><a href="#2-证明除法算法" class="headerlink" title="2. 证明除法算法"></a>2. 证明除法算法</h1><h2 id="2-1-除法算法"><a href="#2-1-除法算法" class="headerlink" title="2.1 除法算法"></a>2.1 除法算法</h2><p><strong>对任意给定的整数a和b，其中b &gt; 0，存在唯一的整数对q（商）和r（余数）使得， </strong></p>
+<script type="math/tex; mode=display">
+a = qb + r</script><p><strong>且 0 ≤ r &lt; b。</strong></p>
+<h2 id="2-2-证明过程"><a href="#2-2-证明过程" class="headerlink" title="2.2 证明过程"></a>2.2 证明过程</h2><h3 id="2-2-1-证明存在性"><a href="#2-2-1-证明存在性" class="headerlink" title="2.2.1 证明存在性"></a>2.2.1 证明存在性</h3><p>构造集合</p>
+<script type="math/tex; mode=display">
+S = \{a-bk:k\in \Z\ 且\  a-bk \ge 0 \}</script><p>显然，集合S非空，由良序原则，存在一个最小元<script type="math/tex">r \in S\  且 \ r=a-qb</script></p>
+<p>因此，<script type="math/tex">a = qb + r, r\ge 0</script>。</p>
+<p>我们采用反证法，假设最小元<script type="math/tex">r>b</script>，则</p>
+<script type="math/tex; mode=display">\exists t\in\Z\   s.t.</script><script type="math/tex; mode=display">
+r = tb + r^*</script><p>则有</p>
+<script type="math/tex; mode=display">
+a=qb+r=qb+tb+r^*=(q+t)b+r^*</script><p>令 <script type="math/tex">q+t = q^* \in Z</script>，则有</p>
+<script type="math/tex; mode=display">
+a=q^*b+r^*</script><p>此时存在<script type="math/tex">r^*<r</script>,则此时的最小元为<script type="math/tex">r^*</script>,与假设矛盾。</p>
+<p>综上: <script type="math/tex">0\leq r< b</script></p>
 <p>Q.E.D </p>
-<h3 id="2-2-2-证明唯一性"><a href="#2-2-2-证明唯一性" class="headerlink" title="2.2.2 证明唯一性"></a>2.2.2 证明唯一性</h3><p>我们才用反证法，假设存在两对$$(q_1,r_1)$$,$$(q_2,r_2)$$,满足$$a&#x3D;qb+r$$,其中$$q_1\ne q_2,\ r_1\ne r_2,\ 0\leq r_1 &lt; b,\ 0\leq r_2 &lt; b$$，则有：<br>$$<br>q_1b+r_1&#x3D;q_2b+r_2<br>$$<br>处理得：<br>$$<br>(q_1-q_2)b&#x3D;(r_2-r_1)<br>$$<br>即<br>$$<br>b\mid(r_2-r_1)\<br>$$<br>又<br>$$<br>\because 0\leq r_1 &lt; b,\ 0\leq r_2 &lt; b\<br>\therefore -b&lt;r_2-r_1&lt;b\<br>\therefore r_2-r_1 &#x3D; 0<br>$$<br>与假设不符，故只存在一对$$(q,r)\ s.t.\ 0\leq r &lt; b\ 且\ a&#x3D;qb+r$$</p>
+<h3 id="2-2-2-证明唯一性"><a href="#2-2-2-证明唯一性" class="headerlink" title="2.2.2 证明唯一性"></a>2.2.2 证明唯一性</h3><p>我们才用反证法，假设存在两对<script type="math/tex">(q_1,r_1)</script>,<script type="math/tex">(q_2,r_2)</script>,满足<script type="math/tex">a=qb+r</script>,其中<script type="math/tex">q_1\ne q_2,\ r_1\ne r_2,\ 0\leq r_1 < b,\ 0\leq r_2 < b</script>，则有：</p>
+<script type="math/tex; mode=display">
+q_1b+r_1=q_2b+r_2</script><p>处理得：</p>
+<script type="math/tex; mode=display">
+(q_1-q_2)b=(r_2-r_1)</script><p>即</p>
+<script type="math/tex; mode=display">
+b\mid(r_2-r_1)\\</script><p>又</p>
+<script type="math/tex; mode=display">
+\because 0\leq r_1 < b,\ 0\leq r_2 < b\\
+\therefore -b<r_2-r_1<b\\
+\therefore r_2-r_1 = 0</script><p>与假设不符，故只存在一对<script type="math/tex">(q,r)\ s.t.\ 0\leq r < b\ 且\ a=qb+r</script></p>
 <p>Q.E.D</p>
-<h1 id="3-程序"><a href="#3-程序" class="headerlink" title="3. 程序"></a>3. 程序</h1><h2 id="3-1-迭代版本的gcd"><a href="#3-1-迭代版本的gcd" class="headerlink" title="3.1 迭代版本的gcd"></a>3.1 迭代版本的gcd</h2><pre><code class="c">#define _CRT_SECURE_NO_WARNINGS 1
+<h1 id="3-程序"><a href="#3-程序" class="headerlink" title="3. 程序"></a>3. 程序</h1><h2 id="3-1-迭代版本的gcd"><a href="#3-1-迭代版本的gcd" class="headerlink" title="3.1 迭代版本的gcd"></a>3.1 迭代版本的gcd</h2><pre><code class="lang-c">#define _CRT_SECURE_NO_WARNINGS 1
 #include &lt;stdio.h&gt;
 
 int gcd(int a, int b);
@@ -312,7 +331,7 @@ int gcd(int a, int b)
     return b;
 &#125;
 </code></pre>
-<h2 id="3-2-迭代版本的egcd"><a href="#3-2-迭代版本的egcd" class="headerlink" title="3.2 迭代版本的egcd"></a>3.2 迭代版本的egcd</h2><pre><code class="c">#define _CRT_SECURE_NO_WARNINGS 1
+<h2 id="3-2-迭代版本的egcd"><a href="#3-2-迭代版本的egcd" class="headerlink" title="3.2 迭代版本的egcd"></a>3.2 迭代版本的egcd</h2><pre><code class="lang-c">#define _CRT_SECURE_NO_WARNINGS 1
 #include &lt;stdio.h&gt;
 
 // ra+sb = gcd(a,b)
@@ -357,7 +376,7 @@ void egcd(int a, int b)
     printf(&quot;r=%d,s=%d,gcd(a,b)=%d&quot;, res_r, res_s, res_gcd);
 &#125;
 </code></pre>
-<h2 id="3-3-基于gcd算法实现的函数"><a href="#3-3-基于gcd算法实现的函数" class="headerlink" title="3.3 基于gcd算法实现的函数"></a>3.3 基于gcd算法实现的函数</h2><pre><code class="c">#define _CRT_SECURE_NO_WARNINGS 1
+<h2 id="3-3-基于gcd算法实现的函数"><a href="#3-3-基于gcd算法实现的函数" class="headerlink" title="3.3 基于gcd算法实现的函数"></a>3.3 基于gcd算法实现的函数</h2><pre><code class="lang-c">#define _CRT_SECURE_NO_WARNINGS 1
 #include &lt;stdio.h&gt;
 
 int gcd(int a, int b);
@@ -395,29 +414,54 @@ int gcd(int a, int b)
 &#125;
 </code></pre>
 <h1 id="4-第二章的第6、8题"><a href="#4-第二章的第6、8题" class="headerlink" title="4. 第二章的第6、8题"></a>4. 第二章的第6、8题</h1><h2 id="4-1-第6题"><a href="#4-1-第6题" class="headerlink" title="4.1 第6题"></a>4.1 第6题</h2><ul>
-<li>假设$$g^a\equiv1\ (mod\ m)\ 且\ g^b\equiv 1(mod\ m)$$,请证明：$$g^{gcd(a,b)}\equiv 1(mod\ m)$$。</li>
+<li>假设<script type="math/tex">g^a\equiv1\ (mod\ m)\ 且\ g^b\equiv 1(mod\ m)</script>,请证明：<script type="math/tex">g^{gcd(a,b)}\equiv 1(mod\ m)</script>。</li>
 </ul>
 <p>证明：</p>
-<p>由$$B\acute{e}zout$$定理可得：<br>$$<br>gcd(a,b)&#x3D;ar+bs<br>$$<br>且a与b的最大公因子是唯一的。</p>
-<p>即证：<br>$$<br>g^{ar＋bs}\equiv1(mod\ m)\<br>$$<br>又<br>$$<br>g^a\equiv1\ (mod\ m)\ \Rightarrow\ g^a&#x3D;k_1m+1\<br>g^b\equiv1\ (mod\ m)\ \Rightarrow\ g^b&#x3D;k_2m+1<br>$$<br>又：<br>$$<br>g^a·g^b &#x3D; (k_1m+1)·(k_2m+1)&#x3D;k_1k_2m+k_1m+k_2m+1\<br>(g^a·g^b)\ mod\ m &#x3D;(k_1k_2m+k_1m+k_2m+1)\ mod\ m &#x3D;1<br>$$<br>故<br>$$<br>g^{a+b}\equiv1(mod\ m)<br>$$<br>即证：<br>$$<br>(g^a)^r\equiv 1(mod\ m)\<br> (g^b)^s\equiv 1(mod\ m)<br>$$</p>
-<p>$$<br>\because(g^a)^r&#x3D;(k_1m+1)^r&#x3D;C_r^0(k_1m)^r1^0+C_r^1(k_1m)^{r-1}1^1+…+C_r^{r-1}(k_1m)^11^{r-1}+C_r^r(k_1m)^01^r\<br>\ \ \ \ \ (g^b)^s&#x3D;(k_2m+1)^s&#x3D;C_s^0(k_2m)^s1^0+C_s^1(k_2m)^{s-1}1^1+…+C_s^{s-1}(k_2m)^11^{s-1}+C_s^s(k_2m)^01^s\<br>$$</p>
-<p>显然，<br>$$<br>[C_r^0(k_1m)^r1^0+C_r^1(k_1m)^{r-1}1^1+…+C_r^{r-1}(k_1m)^11^{r-1}+C_r^r(k_1m)^01^r] \ mod\ m &#x3D;\ C_r^r(k_1m)^01^r\ mod\ m&#x3D;1<br>$$</p>
-<p>$$<br>\therefore (g^a)^r\equiv 1(mod\ m)\<br>$$</p>
-<p>同理可得：<br>$$<br>(g^b)^s\equiv 1(mod\ m)<br>$$</p>
-<p>$$<br>\therefore (g^a)^r·(g^b)^s \equiv 1(mod\ m) \Leftrightarrow g^{ar＋bs}\equiv1(mod\ m)\Leftrightarrow g^{gcd(a,b)}\equiv1(mod\ m)<br>$$</p>
-<p>Q.E.D</p>
+<p>由<script type="math/tex">B\acute{e}zout</script>定理可得：</p>
+<script type="math/tex; mode=display">
+gcd(a,b)=ar+bs</script><p>且a与b的最大公因子是唯一的。</p>
+<p>即证：</p>
+<script type="math/tex; mode=display">
+g^{ar＋bs}\equiv1(mod\ m)\\</script><p>又</p>
+<script type="math/tex; mode=display">
+g^a\equiv1\ (mod\ m)\ \Rightarrow\ g^a=k_1m+1\\
+g^b\equiv1\ (mod\ m)\ \Rightarrow\ g^b=k_2m+1</script><p>又：</p>
+<script type="math/tex; mode=display">
+g^a·g^b = (k_1m+1)·(k_2m+1)=k_1k_2m+k_1m+k_2m+1\\
+(g^a·g^b)\ mod\ m =(k_1k_2m+k_1m+k_2m+1)\ mod\ m =1</script><p>故</p>
+<script type="math/tex; mode=display">
+g^{a+b}\equiv1(mod\ m)</script><p>即证：</p>
+<script type="math/tex; mode=display">
+(g^a)^r\equiv 1(mod\ m)\\
+ (g^b)^s\equiv 1(mod\ m)</script><script type="math/tex; mode=display">
+\because(g^a)^r=(k_1m+1)^r=C_r^0(k_1m)^r1^0+C_r^1(k_1m)^{r-1}1^1+...+C_r^{r-1}(k_1m)^11^{r-1}+C_r^r(k_1m)^01^r\\
+\ \ \ \ \ (g^b)^s=(k_2m+1)^s=C_s^0(k_2m)^s1^0+C_s^1(k_2m)^{s-1}1^1+...+C_s^{s-1}(k_2m)^11^{s-1}+C_s^s(k_2m)^01^s\\</script><p>显然，</p>
+<script type="math/tex; mode=display">
+[C_r^0(k_1m)^r1^0+C_r^1(k_1m)^{r-1}1^1+...+C_r^{r-1}(k_1m)^11^{r-1}+C_r^r(k_1m)^01^r] \ mod\ m =\ C_r^r(k_1m)^01^r\ mod\ m=1</script><script type="math/tex; mode=display">
+\therefore (g^a)^r\equiv 1(mod\ m)\\</script><p>同理可得：</p>
+<script type="math/tex; mode=display">
+(g^b)^s\equiv 1(mod\ m)</script><script type="math/tex; mode=display">
+\therefore (g^a)^r·(g^b)^s \equiv 1(mod\ m) \Leftrightarrow g^{ar＋bs}\equiv1(mod\ m)\Leftrightarrow g^{gcd(a,b)}\equiv1(mod\ m)</script><p>Q.E.D</p>
 <h2 id="4-2-第8题"><a href="#4-2-第8题" class="headerlink" title="4.2 第8题"></a>4.2 第8题</h2><ul>
-<li>证明：如果$$gcd(a,b)&#x3D;d$$,则$$gcd(a&#x2F;d,b&#x2F;d)&#x3D;1$$</li>
+<li>证明：如果<script type="math/tex">gcd(a,b)=d</script>,则<script type="math/tex">gcd(a/d,b/d)=1</script></li>
 </ul>
 <p>证明：</p>
-<p>因为$$gcd(a,b)&#x3D;d$$，可知a与b的最大公因数为d。</p>
-<p>Ⅰ.当$$a\neq b$$时</p>
-<p>设 $$\exists t_1,t_2 \in Z\ 且 t_1\neq t_2 \neq 0\ ,\ s.t.$$<br>$$<br>a&#x3D;t_1d\<br>b&#x3D;t_2d\<br>$$<br>$$\because$$ 假设 $$gcd(t_1,t_2)&#x3D;k\neq 1$$,则必$$\exists d^* &#x3D; kd,s.t.\ d^*&gt;d$$，与题意不符，故$$gcd(t_1,t_2)&#x3D;1$$。</p>
-<p>即$$t_1$$与$$t_2$$互素。</p>
-<p>又：<br>$$<br>a&#x2F;d &#x3D; t_1\<br>b&#x2F;d &#x3D; t_2<br>$$<br>故 $$gcd(a&#x2F;d,b&#x2F;d)&#x3D;1$$。</p>
-<p>Ⅱ.当$$a&#x3D;b$$时</p>
-<p>易知：$$a&#x3D;b&#x3D;d$$</p>
-<p>则 $$gcd(a&#x2F;d,b&#x2F;d)&#x3D; gcd(1,1)&#x3D;1$$</p>
+<p>因为<script type="math/tex">gcd(a,b)=d</script>，可知a与b的最大公因数为d。</p>
+<p>Ⅰ.当<script type="math/tex">a\neq b</script>时</p>
+<p>设 <script type="math/tex">\exists t_1,t_2 \in Z\ 且 t_1\neq t_2 \neq 0\ ,\ s.t.</script></p>
+<script type="math/tex; mode=display">
+a=t_1d\\
+b=t_2d\\</script><script type="math/tex; mode=display">\because$$ 假设 $$gcd(t_1,t_2)=k\neq 1$$,则必$$\exists d^* = kd,s.t.\ d^*>d$$，与题意不符，故$$gcd(t_1,t_2)=1$$。
+
+即$$t_1$$与$$t_2$$互素。
+
+又：</script><p>a/d = t_1\\<br>b/d = t_2</p>
+<script type="math/tex; mode=display">
+故 $$gcd(a/d,b/d)=1$$。
+
+Ⅱ.当$$a=b$$时
+
+易知：$$a=b=d</script><p>则 <script type="math/tex">gcd(a/d,b/d)= gcd(1,1)=1</script></p>
 <p>Q.E.D</p>
 
     </div>
@@ -517,7 +561,7 @@ int gcd(int a, int b)
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/Learning/" style="font-size: 14.703541593210428px;" class="tag-cloud-link">Learning</a>
+    <a href="/tags/Learning/" style="font-size: 11.058797791339234px;" class="tag-cloud-link">Learning</a>
     
 </div>
                 
