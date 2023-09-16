@@ -24,7 +24,7 @@
 <meta property="og:description" content="信息安全的数学基础是该领域的重要组成部分，它涉及多个数学分支。以下是一些常见的数学基础概念： 1.密码学 密码学是信息安全的基础，并使用数学原理来设计和分析密码算法。它包括对称密钥密码学和公钥密码学。对称密钥密码学涉及使用相同密钥进行加密和解密的算法，而公钥密码学使用一对密钥：公钥和私钥。 2.数论 数论在密码学中扮演着重要角色，尤其是在公钥密码学中。其中一些常用的数论概念包括素数、欧拉函数、模运">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-29T14:58:38.000Z">
-<meta property="article:modified_time" content="2023-09-16T06:16:54.828Z">
+<meta property="article:modified_time" content="2023-09-16T06:38:18.496Z">
 <meta property="article:author" content="Cvmax7">
 <meta property="article:tag" content="Learning">
 <meta name="twitter:card" content="summary_large_image">
@@ -440,6 +440,12 @@
   
 
 
+  
+  
+
+
+
+
 
 
 
@@ -631,6 +637,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
