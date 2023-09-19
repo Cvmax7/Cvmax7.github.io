@@ -24,7 +24,7 @@
 <meta property="og:description" content="CINTA-ONE 1. 迭代版本的简单乘法 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#define _CRT_SECURE_NO_WARNINGS 1#include &amp;l">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-16T07:04:50.000Z">
-<meta property="article:modified_time" content="2023-09-17T12:19:55.653Z">
+<meta property="article:modified_time" content="2023-09-19T11:35:21.644Z">
 <meta property="article:author" content="Cvmax7">
 <meta property="article:tag" content="Learning">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.5k 字
+          4.6k 字
         
       </span>
     
@@ -339,6 +339,7 @@ b\mid(r_2-r_1)\\
 </ul>
 <hr />
 <p>证明：</p>
+<p><span class="math display">\[Ⅰ.当m\neq 1\]</span></p>
 <p><span class="math display">\[由B\acute{e}zout定理可得：\]</span>
 <span class="math display">\[
 gcd(a,b)=ar+bs
@@ -346,9 +347,11 @@ gcd(a,b)=ar+bs
 <p>即证： <span class="math display">\[
 g^{ar＋bs}\equiv1(mod\ m)\\
 \]</span> 又 <span class="math display">\[
-g^a\equiv1\ (mod\ m)\ \Rightarrow\ g^a=k_1m+1\\
+g^a\equiv1\ (mod\ m)\ \Rightarrow\ g^a=k_1m+1
+\]</span> <span class="math display">\[
 g^b\equiv1\ (mod\ m)\ \Rightarrow\ g^b=k_2m+1
-\]</span> 又 <span class="math display">\[
+\]</span></p>
+<p>又 <span class="math display">\[
 g^a·g^b = (k_1m+1)·(k_2m+1)=k_1k_2m+k_1m+k_2m+1\\
 (g^a·g^b)\ mod\ m =(k_1k_2m+k_1m+k_2m+1)\ mod\ m =1
 \]</span> 故 <span class="math display">\[
@@ -376,7 +379,14 @@ g^{a+b}\equiv1(mod\ m)
 \therefore (g^a)^r·(g^b)^s \equiv 1(mod\ m) \Leftrightarrow
 g^{ar＋bs}\equiv1(mod\ m)\Leftrightarrow g^{gcd(a,b)}\equiv1(mod\ m)
 \]</span></p>
-<p>Q.E.D</p>
+<p><span class="math display">\[Ⅱ.当m=1\]</span></p>
+<p>易知： <span class="math display">\[
+g^{gcd(a,b)}\ mod\ 1=0
+\]</span> 又 <span class="math display">\[
+1\ mod\ 1=0
+\]</span> 故 <span class="math display">\[
+g^{gcd(a,b)}\equiv1(mod\ m)
+\]</span> Q.E.D</p>
 <h2 id="第8题">4.2 第8题</h2>
 <ul>
 <li><span
