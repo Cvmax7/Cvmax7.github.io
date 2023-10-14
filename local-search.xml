@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>CINTA-THREE</title>
+    <link href="/2023/10/13/CINTA-THREE/"/>
+    <url>/2023/10/13/CINTA-THREE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="第六章习题">第六章习题</h1><h2 id="section">7.</h2><p><span class="math display">\[在群G中，对于每个g_i\in G,i\in[0,n],n\inN,皆存在g_i^{-1}且满足g_i·g_i^{-1}=e\]</span></p><p><span class="math display">\[在群G中，对于所有群元素g，都有e·g=g·e=e\]</span></p><p><span class="math display">\[令g=e^{i-1}，则有\underbrace{e·e···e}_{i个}=e^i=e\]</span></p><p><span class="math display">\[\prod^{n}_{i=0}g_i·g_i^{-1}=\prod^{n}_{i=0}g_i·\prod^{n}_{i=0}g_i^{-1}=e^i=e\]</span></p><p><span class="math display">\[故g_0g_1\dots g_n的逆元是g_0^{-1}g_1^{-1}\dots g_n^{-1}\]</span></p><h2 id="section-1">8.</h2><p>证明：</p><p>假设G'和G''是任意群G的两个子群，记H为G'与G''的交集，e是任意群G中的单位元，则必G'和G''中必定包含e，即<span class="math display">\[e\in G&#39;\cap G&#39;&#39;\]</span></p><p>故H非空。 <span class="math display">\[\forall a,b\in G&#39;\cap G&#39;&#39;\Rightarrow a,b\in G&#39;\wedgea,b\in G&#39;&#39;\]</span> 根据命题6.8有： <span class="math display">\[a,b\in G&#39;\Rightarrow a·b\in G&#39;\]</span></p><p><span class="math display">\[a,b\in G&#39;&#39;\Rightarrow a·b\in G&#39;&#39;\]</span></p><p>故 <span class="math display">\[a·b\in G&#39;\cap G&#39;&#39;\]</span> 根据命题6.8又有： <span class="math display">\[a,b\in G&#39; \Rightarrow a^{-1},b^{1}\in G&#39;\]</span></p><p><span class="math display">\[a,b\in G&#39;&#39; \Rightarrow a^{-1},b^{1}\in G&#39;&#39;\]</span></p><p>故 <span class="math display">\[a^{-1},b^{1}\in G&#39;\cap G&#39;&#39;\]</span> 根据命题6.8,故任意群G的两个子群的交集也是群G的子群。</p><h2 id="section-2">9.</h2><p>假设G'和G''是任意群G的两个子群，记H为G'与G''的并集，e是任意群G中的单位元，则必G'和G''中必定包含e，即<span class="math display">\[e\in G&#39;\cup G&#39;&#39;\]</span> 则H非空。</p><p>任意取G中的两个子群： <span class="math display">\[G&#39;=\{e,a,b,c,a^{-1},b^{-1},c^{-1},a·b,\ a·c,\ b·c\}\]</span></p><p><span class="math display">\[G&#39;&#39;=\{e,x,y,z,x^{-1},y^{-1},z^{-1},x·y,\ x·z,\ y·z\}\]</span></p><p>则 <span class="math display">\[H=G&#39;\cupG&#39;&#39;=\{e,a,b,c,x,y,z,a^{-1},b^{-1},c^{-1},x^{-1},y^{-1},z^{-1},\a·b,\ a·c,\ b·c\ ,x·y,\ x·z,\ y·z\}\]</span> 在H中取 <span class="math display">\[a\in G&#39;\wedge x\in G&#39;&#39;\]</span> 而 <span class="math display">\[a·x\notin H\]</span> 故G的两子群的非空并集不满足命题6.8。</p><p>故任意群G的两个子群的并集也是群G的子群是一个伪命题。</p><h2 id="section-3">10.</h2><p>证明：</p><p>在HK中任取两个元素 <span class="math display">\[h_1k_1,h_2k_2\in HK\   \wedge\ h_1k_1,h_2k_2\in G\]</span> 因为G为阿贝尔群,有： <span class="math display">\[h_1k_1·h_2k_2=(h_1·h_2)·(k_1·k_2）\in G\]</span></p><p><span class="math display">\[h_1·h_2\in H,\ k_1·k_2\in K\]</span></p><p>故 <span class="math display">\[h_1k_1·h_2k_2\in HK\]</span> 在阿贝尔群G中有： <span class="math display">\[(h_1·k_1)^{-1}=h_1^{-1}·k_1^{-1}\]</span> 而 <span class="math display">\[h_1^{-1}\in H,\ k_1^{-1}\in K\]</span> 故 <span class="math display">\[h_1^{-1}·k_1^{-1}=(h_1·k_1)^{-1}\in HK\]</span> 根据命题6.8，可得HK也是群G的子群。证毕。</p><p><strong>若G不是阿贝尔群，结论不成立。因为非阿贝尔群不满足交换律。</strong>$$</p><p>$$</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CINTA</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Learning</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CINTA-TWO</title>
     <link href="/2023/10/05/CINTA-TWO/"/>
     <url>/2023/10/05/CINTA-TWO/</url>
