@@ -16,22 +16,22 @@
   <meta name="author" content="Cvmax7">
   <meta name="keywords" content="">
   
-    <meta name="description" content="10.1 1.运用CRT求解：  x\equiv    8\ (mod\ 11) x\equiv \ 3(mod\ 19)解： 令a&#x3D;8,b&#x3D;3,p&#x3D;11,q&#x3D;19,x&#x3D;aqq^{-1}+bpp^{-1}\ \ (mod\ \  pq),其中:  pp^{-1}\equiv 1 (mod \ q) qq^{-1}\equiv 1(mod\ p)根据egcd算法:      \left\{    \">
+    <meta name="description" content="9.5 5.定义映射\phi:G\rightarrow G为：\phi:g\rightarrow g^2。请证明\phi是一种群同态当且仅当G是阿贝尔群。  证明： \Rightarrow$$：任取$$g_1,g_2,\in  G,\phi (g_1g_2) &#x3D; (g_1g_2)^2&#x3D;g_1g_2g_1g_2\because \phi$$是一种群同态，群操作得以保持  $$\therefore g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CINTA-SIX">
-<meta property="og:url" content="http://example.com/2023/11/20/CINTA-SIX/index.html">
+<meta property="og:title" content="CINTA-FIVE">
+<meta property="og:url" content="http://example.com/2023/11/13/CINTA-FIVE/index.html">
 <meta property="og:site_name" content="Cvmax7">
-<meta property="og:description" content="10.1 1.运用CRT求解：  x\equiv    8\ (mod\ 11) x\equiv \ 3(mod\ 19)解： 令a&#x3D;8,b&#x3D;3,p&#x3D;11,q&#x3D;19,x&#x3D;aqq^{-1}+bpp^{-1}\ \ (mod\ \  pq),其中:  pp^{-1}\equiv 1 (mod \ q) qq^{-1}\equiv 1(mod\ p)根据egcd算法:      \left\{    \">
+<meta property="og:description" content="9.5 5.定义映射\phi:G\rightarrow G为：\phi:g\rightarrow g^2。请证明\phi是一种群同态当且仅当G是阿贝尔群。  证明： \Rightarrow$$：任取$$g_1,g_2,\in  G,\phi (g_1g_2) &#x3D; (g_1g_2)^2&#x3D;g_1g_2g_1g_2\because \phi$$是一种群同态，群操作得以保持  $$\therefore g">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-20T14:09:01.000Z">
-<meta property="article:modified_time" content="2023-11-20T14:11:52.843Z">
+<meta property="article:published_time" content="2023-11-12T16:26:18.000Z">
+<meta property="article:modified_time" content="2023-12-26T11:20:11.184Z">
 <meta property="article:author" content="Cvmax7">
 <meta property="article:tag" content="Learning">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>CINTA-SIX - Cvmax7</title>
+  <title>CINTA-FIVE - Cvmax7</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="CINTA-SIX"></span>
+            <span id="subtitle" data-typed-text="CINTA-FIVE"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-20 22:09" pubdate>
-          2023年11月20日 晚上
+        <time datetime="2023-11-13 00:26" pubdate>
+          2023年11月13日 凌晨
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.1k 字
+          1.7k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          18 分钟
+          14 分钟
         
       </span>
     
@@ -268,76 +268,70 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">CINTA-SIX</h1>
+            <h1 id="seo-header">CINTA-FIVE</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="10-1"><a href="#10-1" class="headerlink" title="10.1"></a>10.1</h1><ul>
-<li><p>1.运用CRT求解：</p>
-<script type="math/tex; mode=display">
-x\equiv    8\ (mod\ 11)</script><script type="math/tex; mode=display">
-x\equiv \ 3(mod\ 19)</script><p>解：</p>
-<p>令<script type="math/tex">a=8,b=3,p=11,q=19,x=aqq^{-1}+bpp^{-1}\ \ (mod\ \  pq),其中:</script></p>
-<script type="math/tex; mode=display">
-pp^{-1}\equiv 1 (mod \ q)</script><script type="math/tex; mode=display">
-qq^{-1}\equiv 1(mod\ p)</script><p>根据<script type="math/tex">egcd</script>算法:</p>
-</li>
+                <h1 id="9-5"><a href="#9-5" class="headerlink" title="9.5"></a>9.5</h1><ul>
+<li>5.定义映射<script type="math/tex">\phi:G\rightarrow G为：\phi:g\rightarrow g^2</script>。请证明<script type="math/tex">\phi</script>是一种群同态当且仅当<script type="math/tex">G</script>是阿贝尔群。</li>
 </ul>
+<p><strong>证明：</strong></p>
+<script type="math/tex; mode=display">\Rightarrow$$：任取$$g_1,g_2,\in  G,\phi (g_1g_2) = (g_1g_2)^2=g_1g_2g_1g_2</script><script type="math/tex; mode=display">\because \phi$$是一种群同态，群操作得以保持
+
+$$\therefore g_1g_2g_1g_2=\phi(g_1)\phi(g_2)={g_1}^2{g_2}^2$$，满足交换律
+
+$$\therefore G$$是阿贝尔群
+
+$$\Leftarrow$$:$$G$$为阿贝尔群，任取$$g_1,g_2,\in  G$$,都有：</script><p>\phi (g_1g_2) = (g_1g_2)^2=g_1g_2g_1g_2={g_1}^2{g_2}^2=\phi(g_1)\phi(g_2)，群操作得以保持</p>
 <script type="math/tex; mode=display">
-  \left\{
-   \begin{matrix}
-     0 & 1 & 19 \\
-     1 & 0 & 11 \\
-     7 & -4 & 1
-    \end{matrix}
-    \right\}</script><ul>
-<li><p>解得：<script type="math/tex">p^{-1}=7,q^{-1}=7</script></p>
-</li>
+$$\therefore \phi$$是一种群同态。
+
+证毕。
+
+# 9.6
+
+- 6.设$$\phi:G\rightarrow G$$是一种群同态。请证明：如果$$G$$是循环群，则$$\phi (G)$$也是循环群；如果$$G$$是交换群，则$$\phi (G)$$也是交换群。
+
+**证明：**
+
+设$$G=<g>$$为循环群，假设$$\phi:G\rightarrow G为：\phi:g \rightarrow g^n</script><p>取<script type="math/tex">g^n\in G</script>，有：</p>
+<script type="math/tex; mode=display">
+\phi(g^n)=\underbrace {g\cdot g\dots \cdot g}_{n个}=\phi(g)^n</script><p>故<script type="math/tex">\phi(G)</script>也为循环群。</p>
+<p>设<script type="math/tex">G</script>为交换群，假设<script type="math/tex">\phi:G \rightarrow G为：\phi:g \rightarrow g^2</script></p>
+<p>任取<script type="math/tex">a,b\in G</script>，都有：</p>
+<script type="math/tex; mode=display">
+\phi(ab)=(ab)^2=abab=\phi(a)\phi(b)=a^2b^2</script><p>故<script type="math/tex">\phi(G)</script>也为交换群。</p>
+<p>证毕。</p>
+<h1 id="9-7"><a href="#9-7" class="headerlink" title="9.7"></a>9.7</h1><ul>
+<li>7.证明：如果<script type="math/tex">H</script>是群<script type="math/tex">G</script>上指标为2的子群，则<script type="math/tex">H</script>是<script type="math/tex">G</script> 的正规子群。</li>
 </ul>
-<p>代入<script type="math/tex">x=aqq^{-1}+bpp^{-1}\ \ (mod\ \  pq)</script>，解得：<script type="math/tex">x\equiv 41(mod\ \ 209)</script></p>
-<h1 id="10-2"><a href="#10-2" class="headerlink" title="10.2"></a>10.2</h1><ul>
-<li>运用CRT求解：</li>
+<p><strong>证明：</strong></p>
+<p>根据题意：<script type="math/tex">[G:H]=|G|/|H|=2</script></p>
+<p>即<script type="math/tex">H</script>在<script type="math/tex">G</script>上不相同的左陪集的个数只有2个，一个为<script type="math/tex">H</script>本身，另一个记为<script type="math/tex">H'</script></p>
+<p>任取<script type="math/tex">g\in G</script>，若：</p>
+<p>i.<script type="math/tex">g \in H</script>，根据H的吸收性我们得知：<script type="math/tex">gH=H=Hg</script></p>
+<p>ii.<script type="math/tex">g\notin H \Leftrightarrow g \in H'</script>，有：<script type="math/tex">gH\neq H，Hg\neq H</script>，根据<script type="math/tex">[G:H]=2</script>，我们得知<script type="math/tex">gH=H'，Hg=H'</script>，故<script type="math/tex">gH=Hg</script></p>
+<p>综上:<script type="math/tex">\forall g \in G，gH=Hg</script> 恒成立，故<script type="math/tex">H</script>为<script type="math/tex">G</script>的正规子群。</p>
+<h1 id="9-8"><a href="#9-8" class="headerlink" title="9.8"></a>9.8</h1><ul>
+<li>8.给定任意群<script type="math/tex">G</script>，<script type="math/tex">H</script>是群<script type="math/tex">G</script>的正规子群。请证明，如果群<script type="math/tex">G</script>是阿贝尔群，则商群<script type="math/tex">G/H</script>也是阿贝尔群。</li>
 </ul>
-<script type="math/tex; mode=display">
-x\equiv    1\ (mod\ 5)\\
-x\equiv    2\ (mod\ 7)\\
-x\equiv    3\ (mod\ 9)\\
-x\equiv    4\ (mod\ 11)</script><p>解：</p>
-<p>记<script type="math/tex">a_0=1,a_1=2,a_2=3,a_3=4,m_0=5,m_1=7,m_2=9,m_3=11,M=m_0m_1m_2m_3,b_i=M/m_i</script>,存在<script type="math/tex">b_i^{-1}s.t.b_ib_i^{-1}\equiv 1(mod\ m_i)</script>,其中<script type="math/tex">i\in\{0,1,2,3\}</script></p>
-<p>代入数据有：</p>
-<script type="math/tex; mode=display">
-M=3465\\
-b_0=693\\
-b_1=495\\
-b_2=385\\
-b_3=315</script><p>根据<script type="math/tex">egcd</script>:</p>
-<script type="math/tex; mode=display">
-\left\{
- \begin{matrix}
-   0 & 1 & 693 \\
-   1 & 0 & 5 \\
-   -277 & 2 & 1
-  \end{matrix}
-  \right\}</script><p>解得<script type="math/tex">b_0^{-1}=2</script></p>
-<p>同理,解得：<script type="math/tex">b_1^{-1}=3,b_2^{-1}=4,b_3^{-1}=8</script></p>
-<p>则<script type="math/tex">\sum_{i=0}^3a_ib_ib_i^{-1}=1386+2970+4620+10080=19056</script></p>
-<p>则<script type="math/tex">x=\sum_{i=0}^3a_ib_ib_i^{-1}(mod\ \ 3465)\equiv 1731(mod\ \ 3465)</script></p>
-<h1 id="10-3"><a href="#10-3" class="headerlink" title="10.3"></a>10.3</h1><ul>
-<li>手动计算<script type="math/tex">2000^{2019}(mod\ 221)</script>。</li>
+<p><strong>证明：</strong></p>
+<p>任取<script type="math/tex">a,b\in G,h_1h_2,h_3h_4 \in H</script>，因为<script type="math/tex">H</script>为群<script type="math/tex">G</script>的正规子群,有：<script type="math/tex">aH=Ha,\ bH=Hb</script></p>
+<p>商群<script type="math/tex">G/H</script>群操作为：<script type="math/tex">(aH)(bH)=abH</script></p>
+<p>因为群<script type="math/tex">G</script>是阿贝尔群，有：</p>
+<script type="math/tex; mode=display">(ah_1)(bh_2)=abh_1h_2=bah_1h_2\in baH$$，即$$abH\subseteq baH</script><script type="math/tex; mode=display">(bh_3)(ah_4)=bah_3h_4=abh_3h_4\in abH$$，即$$baH\subseteq abH</script><p>故在商群<script type="math/tex">G/H</script>中满足<script type="math/tex">(aH)(bH)=abH=baH=(bH)(aH)</script></p>
+<p>故商群<script type="math/tex">G/H</script>也是阿贝尔群。</p>
+<h1 id="9-9"><a href="#9-9" class="headerlink" title="9.9"></a>9.9</h1><ul>
+<li>9.给定任意群<script type="math/tex">G</script>，<script type="math/tex">H</script>是群<script type="math/tex">G</script>的正规子群。请证明，如果群<script type="math/tex">G</script>是循环群，则商群<script type="math/tex">G/H</script>也是循环群。</li>
 </ul>
-<p>解：</p>
-<script type="math/tex; mode=display">221=17×13</script><script type="math/tex; mode=display">2000\leftrightarrow(11,11)</script><p>即求<script type="math/tex">(11,11)^{2019}=([11^{2019}\ mod\ \ 17],[11^{2019}\ mod\ \ 13])</script></p>
-<p>由费马小定理得：</p>
+<p><strong>证明：</strong></p>
+<p>设<script type="math/tex">G=<g></script>为循环群，任取<script type="math/tex">g\in G</script>，因为<script type="math/tex">H</script>是群<script type="math/tex">G</script>的正规子群，对于商群<script type="math/tex">G/H</script>而言，<script type="math/tex">\forall a,b\in G</script>有<script type="math/tex">(aH)\cdot (bH)=abH</script>，故有</p>
 <script type="math/tex; mode=display">
-11^{2019}=11^{126×16+3}\equiv 1(mod\ 17)\\
-11^{2019}=11^{168×12+3}\equiv 1 (mod\ 13)</script><p>故有：</p>
-<script type="math/tex; mode=display">
-([11^{2019}\ mod\ \ 17],[11^{2019}\ mod\ \ 13])=([11^3\ mod\ \ 17],[11^3\ mod\ \ 13])=(5,5)\leftrightarrow 5</script><p>故答案为5。</p>
-<h1 id="10-7"><a href="#10-7" class="headerlink" title="10.7"></a>10.7</h1><ul>
-<li>实现一个利用CRT求解同余方程的程序。</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-meta">#<span class="hljs-keyword">define</span> N 10</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">crt</span><span class="hljs-params">(<span class="hljs-type">int</span> a[N], <span class="hljs-type">int</span> m[N], <span class="hljs-type">int</span> d, <span class="hljs-type">int</span> sum_m)</span></span>; <span class="hljs-comment">//用CRT求解同余方程组函数</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Mul_Inverse</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> m)</span></span>; <span class="hljs-comment">//求乘法逆元的函数</span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">//d为这个方程组内的方程数</span><br>	<span class="hljs-type">int</span> a[N], m[N], b[N], b_[N], d = <span class="hljs-number">0</span>, x = <span class="hljs-number">0</span>, sum_m = <span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;= N; i++)<br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;请输入方程组中每个方程的a与m，输入0停止。&quot;</span> &lt;&lt; endl;<br>		cin &gt;&gt; a[i] &gt;&gt; m[i];<br>		<span class="hljs-keyword">if</span> (a[i] != <span class="hljs-number">0</span> &amp;&amp; m[i] != <span class="hljs-number">0</span>)<br>		&#123;<br>			sum_m *= m[i];<br>		&#125;<br>		<span class="hljs-keyword">else</span><br>		&#123;<br>			d = i;<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>	&#125;<br>	cout &lt;&lt; <span class="hljs-string">&quot;x=&quot;</span> &lt;&lt; <span class="hljs-built_in">crt</span>(a, m, d, sum_m) &lt;&lt; endl;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">crt</span><span class="hljs-params">(<span class="hljs-type">int</span> a[N], <span class="hljs-type">int</span> m[N], <span class="hljs-type">int</span> d, <span class="hljs-type">int</span> sum_m)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> b[N], b_[N], x = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; d; i++)<br>	&#123;<br>		b[i] = sum_m / m[i];<br>		b_[i] = <span class="hljs-built_in">Mul_Inverse</span>(b[i], m[i]);<br>	&#125;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; d; i++)<br>	&#123;<br>		x += (a[i] * b[i] * b_[i]);<br>	&#125;<br>	<span class="hljs-keyword">return</span> (x % sum_m);<br>&#125;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Mul_Inverse</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> m)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++)<br>	&#123;<br>		<span class="hljs-keyword">if</span> ((a * i) % m == <span class="hljs-number">1</span>)<br>		&#123;<br>			res = i;<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br></code></pre></td></tr></table></figure>
+\underbrace{gH\cdot gH\dots \cdot gH}_{n个}=g^nH</script><script type="math/tex; mode=display">g$$在$$G=<g>$$中经过$$n$$次群操作后，必能生成整个$$G$$。
+
+假设$$g_1,g_2\dots g_n\in G$$，则商群$$G/H=\{g_1H，g_2H\dots g_nH\}$$，其中：$$\exist i,j\ s.t.\ g_i=g^j</script><p>故<script type="math/tex">gH</script>经过<script type="math/tex">n</script>次群操作后，必能生成正规子群<script type="math/tex">H</script>在群<script type="math/tex">G</script>上的所有陪集，即整个<script type="math/tex">g^nH</script>（商群)。</p>
+<p>故商群<script type="math/tex">G/H</script>也是循环群。</p>
 
                 
               </div>
@@ -383,8 +377,8 @@ b_3=315</script><p>根据<script type="math/tex">egcd</script>:</p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>CINTA-SIX</div>
-      <div>http://example.com/2023/11/20/CINTA-SIX/</div>
+      <div>CINTA-FIVE</div>
+      <div>http://example.com/2023/11/13/CINTA-FIVE/</div>
     </div>
     <div class="license-meta">
       
@@ -396,7 +390,7 @@ b_3=315</script><p>根据<script type="math/tex">egcd</script>:</p>
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月20日</div>
+          <div>2023年11月13日</div>
         </div>
       
       
@@ -428,9 +422,9 @@ b_3=315</script><p>根据<script type="math/tex">egcd</script>:</p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/24/CINTA-2/" title="CINTA-2">
+                      <a href="/2023/11/20/CINTA-SIX/" title="CINTA-SIX">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CINTA-2</span>
+                        <span class="hidden-mobile">CINTA-SIX</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -438,8 +432,8 @@ b_3=315</script><p>根据<script type="math/tex">egcd</script>:</p>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/11/13/CINTA-FIVE/" title="CINTA-FIVE">
-                        <span class="hidden-mobile">CINTA-FIVE</span>
+                      <a href="/2023/11/04/CINTA-FOUR/" title="CINTA-FOUR">
+                        <span class="hidden-mobile">CINTA-FOUR</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

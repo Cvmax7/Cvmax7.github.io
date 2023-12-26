@@ -104,6 +104,31 @@
   
   
   <entry>
+    <title>CINTA-FIVE</title>
+    <link href="/2023/11/13/CINTA-FIVE/"/>
+    <url>/2023/11/13/CINTA-FIVE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="9-5"><a href="#9-5" class="headerlink" title="9.5"></a>9.5</h1><ul><li>5.定义映射<script type="math/tex">\phi:G\rightarrow G为：\phi:g\rightarrow g^2</script>。请证明<script type="math/tex">\phi</script>是一种群同态当且仅当<script type="math/tex">G</script>是阿贝尔群。</li></ul><p><strong>证明：</strong></p><script type="math/tex; mode=display">\Rightarrow$$：任取$$g_1,g_2,\in  G,\phi (g_1g_2) = (g_1g_2)^2=g_1g_2g_1g_2</script><script type="math/tex; mode=display">\because \phi$$是一种群同态，群操作得以保持$$\therefore g_1g_2g_1g_2=\phi(g_1)\phi(g_2)={g_1}^2{g_2}^2$$，满足交换律$$\therefore G$$是阿贝尔群$$\Leftarrow$$:$$G$$为阿贝尔群，任取$$g_1,g_2,\in  G$$,都有：</script><p>\phi (g_1g_2) = (g_1g_2)^2=g_1g_2g_1g_2={g_1}^2{g_2}^2=\phi(g_1)\phi(g_2)，群操作得以保持</p><script type="math/tex; mode=display">$$\therefore \phi$$是一种群同态。证毕。# 9.6- 6.设$$\phi:G\rightarrow G$$是一种群同态。请证明：如果$$G$$是循环群，则$$\phi (G)$$也是循环群；如果$$G$$是交换群，则$$\phi (G)$$也是交换群。**证明：**设$$G=<g>$$为循环群，假设$$\phi:G\rightarrow G为：\phi:g \rightarrow g^n</script><p>取<script type="math/tex">g^n\in G</script>，有：</p><script type="math/tex; mode=display">\phi(g^n)=\underbrace {g\cdot g\dots \cdot g}_{n个}=\phi(g)^n</script><p>故<script type="math/tex">\phi(G)</script>也为循环群。</p><p>设<script type="math/tex">G</script>为交换群，假设<script type="math/tex">\phi:G \rightarrow G为：\phi:g \rightarrow g^2</script></p><p>任取<script type="math/tex">a,b\in G</script>，都有：</p><script type="math/tex; mode=display">\phi(ab)=(ab)^2=abab=\phi(a)\phi(b)=a^2b^2</script><p>故<script type="math/tex">\phi(G)</script>也为交换群。</p><p>证毕。</p><h1 id="9-7"><a href="#9-7" class="headerlink" title="9.7"></a>9.7</h1><ul><li>7.证明：如果<script type="math/tex">H</script>是群<script type="math/tex">G</script>上指标为2的子群，则<script type="math/tex">H</script>是<script type="math/tex">G</script> 的正规子群。</li></ul><p><strong>证明：</strong></p><p>根据题意：<script type="math/tex">[G:H]=|G|/|H|=2</script></p><p>即<script type="math/tex">H</script>在<script type="math/tex">G</script>上不相同的左陪集的个数只有2个，一个为<script type="math/tex">H</script>本身，另一个记为<script type="math/tex">H'</script></p><p>任取<script type="math/tex">g\in G</script>，若：</p><p>i.<script type="math/tex">g \in H</script>，根据H的吸收性我们得知：<script type="math/tex">gH=H=Hg</script></p><p>ii.<script type="math/tex">g\notin H \Leftrightarrow g \in H'</script>，有：<script type="math/tex">gH\neq H，Hg\neq H</script>，根据<script type="math/tex">[G:H]=2</script>，我们得知<script type="math/tex">gH=H'，Hg=H'</script>，故<script type="math/tex">gH=Hg</script></p><p>综上:<script type="math/tex">\forall g \in G，gH=Hg</script> 恒成立，故<script type="math/tex">H</script>为<script type="math/tex">G</script>的正规子群。</p><h1 id="9-8"><a href="#9-8" class="headerlink" title="9.8"></a>9.8</h1><ul><li>8.给定任意群<script type="math/tex">G</script>，<script type="math/tex">H</script>是群<script type="math/tex">G</script>的正规子群。请证明，如果群<script type="math/tex">G</script>是阿贝尔群，则商群<script type="math/tex">G/H</script>也是阿贝尔群。</li></ul><p><strong>证明：</strong></p><p>任取<script type="math/tex">a,b\in G,h_1h_2,h_3h_4 \in H</script>，因为<script type="math/tex">H</script>为群<script type="math/tex">G</script>的正规子群,有：<script type="math/tex">aH=Ha,\ bH=Hb</script></p><p>商群<script type="math/tex">G/H</script>群操作为：<script type="math/tex">(aH)(bH)=abH</script></p><p>因为群<script type="math/tex">G</script>是阿贝尔群，有：</p><script type="math/tex; mode=display">(ah_1)(bh_2)=abh_1h_2=bah_1h_2\in baH$$，即$$abH\subseteq baH</script><script type="math/tex; mode=display">(bh_3)(ah_4)=bah_3h_4=abh_3h_4\in abH$$，即$$baH\subseteq abH</script><p>故在商群<script type="math/tex">G/H</script>中满足<script type="math/tex">(aH)(bH)=abH=baH=(bH)(aH)</script></p><p>故商群<script type="math/tex">G/H</script>也是阿贝尔群。</p><h1 id="9-9"><a href="#9-9" class="headerlink" title="9.9"></a>9.9</h1><ul><li>9.给定任意群<script type="math/tex">G</script>，<script type="math/tex">H</script>是群<script type="math/tex">G</script>的正规子群。请证明，如果群<script type="math/tex">G</script>是循环群，则商群<script type="math/tex">G/H</script>也是循环群。</li></ul><p><strong>证明：</strong></p><p>设<script type="math/tex">G=<g></script>为循环群，任取<script type="math/tex">g\in G</script>，因为<script type="math/tex">H</script>是群<script type="math/tex">G</script>的正规子群，对于商群<script type="math/tex">G/H</script>而言，<script type="math/tex">\forall a,b\in G</script>有<script type="math/tex">(aH)\cdot (bH)=abH</script>，故有</p><script type="math/tex; mode=display">\underbrace{gH\cdot gH\dots \cdot gH}_{n个}=g^nH</script><script type="math/tex; mode=display">g$$在$$G=<g>$$中经过$$n$$次群操作后，必能生成整个$$G$$。假设$$g_1,g_2\dots g_n\in G$$，则商群$$G/H=\{g_1H，g_2H\dots g_nH\}$$，其中：$$\exist i,j\ s.t.\ g_i=g^j</script><p>故<script type="math/tex">gH</script>经过<script type="math/tex">n</script>次群操作后，必能生成正规子群<script type="math/tex">H</script>在群<script type="math/tex">G</script>上的所有陪集，即整个<script type="math/tex">g^nH</script>（商群)。</p><p>故商群<script type="math/tex">G/H</script>也是循环群。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>CINTA</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Learning</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CINTA-FOUR</title>
     <link href="/2023/11/04/CINTA-FOUR/"/>
     <url>/2023/11/04/CINTA-FOUR/</url>
