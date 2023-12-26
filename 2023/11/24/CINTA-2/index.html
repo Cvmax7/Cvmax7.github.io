@@ -16,22 +16,22 @@
   <meta name="author" content="Cvmax7">
   <meta name="keywords" content="">
   
-    <meta name="description" content="编程题1.模指数运算函数Mod_Exp123456789101112131415161718192021222324#define _CRT_SECURE_NO_WARNINGS 1#include &lt;stdio.h&gt;&#x2F;&#x2F;模指数运算int Mod_Exp(int a, int b, int m);int main()&amp;#123;	int a, b, m;	printf(&quot;输入">
+    <meta name="description" content="第三章3.9 定义$Fibonacci$数列如下:$F(0) &#x3D; 0，F(1) &#x3D; 1$，且对于$n ≥ 2，F(n) &#x3D; F(n − 1) + F(n−2)$。所以，该数列是：$0, 1, 1, 2, 3, 5, 8, 13, 21, . . .$ 。如何能快速地求出$F(n)$呢？很幸运，我们有以下等式： \begin{bmatrix}     1 &amp; 1 \\     1 &amp; 0  \end">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CINTA-TWO">
-<meta property="og:url" content="http://example.com/2023/10/05/CINTA-TWO/index.html">
+<meta property="og:title" content="CINTA-2">
+<meta property="og:url" content="http://example.com/2023/11/24/CINTA-2/index.html">
 <meta property="og:site_name" content="Cvmax7">
-<meta property="og:description" content="编程题1.模指数运算函数Mod_Exp123456789101112131415161718192021222324#define _CRT_SECURE_NO_WARNINGS 1#include &lt;stdio.h&gt;&#x2F;&#x2F;模指数运算int Mod_Exp(int a, int b, int m);int main()&amp;#123;	int a, b, m;	printf(&quot;输入">
+<meta property="og:description" content="第三章3.9 定义$Fibonacci$数列如下:$F(0) &#x3D; 0，F(1) &#x3D; 1$，且对于$n ≥ 2，F(n) &#x3D; F(n − 1) + F(n−2)$。所以，该数列是：$0, 1, 1, 2, 3, 5, 8, 13, 21, . . .$ 。如何能快速地求出$F(n)$呢？很幸运，我们有以下等式： \begin{bmatrix}     1 &amp; 1 \\     1 &amp; 0  \end">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-05T13:28:49.000Z">
-<meta property="article:modified_time" content="2023-10-16T04:27:06.101Z">
+<meta property="article:published_time" content="2023-11-23T17:50:45.000Z">
+<meta property="article:modified_time" content="2023-12-26T11:15:11.246Z">
 <meta property="article:author" content="Cvmax7">
 <meta property="article:tag" content="Learning">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>CINTA-TWO - Cvmax7</title>
+  <title>CINTA-2 - Cvmax7</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="CINTA-TWO"></span>
+            <span id="subtitle" data-typed-text="CINTA-2"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-05 21:28" pubdate>
-          2023年10月5日 晚上
+        <time datetime="2023-11-24 01:50" pubdate>
+          2023年11月24日 凌晨
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          3.3k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          16 分钟
+          28 分钟
         
       </span>
     
@@ -268,62 +268,97 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">CINTA-TWO</h1>
+            <h1 id="seo-header">CINTA-2</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="编程题"><a href="#编程题" class="headerlink" title="编程题"></a>编程题</h1><h2 id="1-模指数运算函数Mod-Exp"><a href="#1-模指数运算函数Mod-Exp" class="headerlink" title="1.模指数运算函数Mod_Exp"></a>1.模指数运算函数Mod_Exp</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-comment">//模指数运算</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">Mod_Exp</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b, <span class="hljs-type">int</span> m)</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>	<span class="hljs-type">int</span> a, b, m;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;输入a,b,m\n&quot;</span>);<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d,%d,%d&quot;</span>, &amp;a, &amp;b, &amp;m);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a的b次方模m的值为%d&quot;</span>, Mod_Exp(a, b, m));<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">Mod_Exp</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b, <span class="hljs-type">int</span> m)</span><br>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">while</span> (b &gt; <span class="hljs-number">0</span>)<br>	&#123;<br>		<span class="hljs-keyword">if</span> ((b &amp; <span class="hljs-number">1</span>) == <span class="hljs-number">1</span>) res = (res * a) % m;<br>		b /= <span class="hljs-number">2</span>;<br>		a = (a * a) % m;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h2 id="2-求乘法逆元的函数Mul-Inverse"><a href="#2-求乘法逆元的函数Mul-Inverse" class="headerlink" title="2.求乘法逆元的函数Mul_Inverse"></a>2.求乘法逆元的函数Mul_Inverse</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cmath&gt;</span></span><br><span class="hljs-comment">//求乘法逆元</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">Mul_Inverse</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> m)</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>	<span class="hljs-type">int</span> a, m;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;请输入a,m (a，m必须互素) \n&quot;</span>);<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d,%d&quot;</span>, &amp;a, &amp;m);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a模m的乘法逆元为%d&quot;</span>, Mul_Inverse(a, m));<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">Mul_Inverse</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> m)</span><br>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++)<br>	&#123;<br>		<span class="hljs-keyword">if</span> ((a * i) % m == <span class="hljs-number">1</span>)<br>		&#123;<br>			res = i;<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-<h1 id="计算题"><a href="#计算题" class="headerlink" title="计算题"></a>计算题</h1><h2 id="4-1"><a href="#4-1" class="headerlink" title="4.1"></a>4.1</h2><script type="math/tex; mode=display">
-3^{2019}\equiv 3^{91*22+17}\ \ (mod\ 23)</script><p>因为2019 = 91*(23-1) + 17, 根据费马小定理：</p>
+                <h1 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h1><h2 id="3-9"><a href="#3-9" class="headerlink" title="3.9"></a>3.9</h2><ul>
+<li>定义$Fibonacci$数列如下:$F(0) = 0，F(1) = 1$，且对于$n ≥ 2，F(n) = F(n − 1) + F(n−2)$。所以，该数列是：$0, 1, 1, 2, 3, 5, 8, 13, 21, . . .$ 。如何能快速地求出$F(n)$呢？很幸运，我们有以下等式：<script type="math/tex; mode=display">
+\begin{bmatrix}
+    1 & 1 \\
+    1 & 0 
+\end{bmatrix}^n=
+\begin{bmatrix}
+    F(n+1) & F(n) \\
+    F(n) & F(n-1) 
+\end{bmatrix}</script>虽然，看上去该算法需要一次矩阵的指数运算，但是借助快速指数运算的方法，这里可以产生一个快速求解$F(n)$的算法。请给出算法，并编程实现。</li>
+</ul>
+<p><strong>解：</strong></p>
+<p>令</p>
 <script type="math/tex; mode=display">
-3^{91*22+17}\ \  \equiv 3^{17}\ \ (mod\ 23)=3*3^{16}\ \ (mod\ 23)</script><p>又因</p>
+x=
+\begin{bmatrix}
+    1 & 1 \\
+    1 & 0 
+\end{bmatrix}
+, res=
+\begin{bmatrix}
+    1 & 0 \\
+    0 & 1 
+\end{bmatrix}</script><p>根据快速指数运算方法：将$n$二进制展开，假设有$k$个bit，将$x^n$变形为：$x^n = \prod_{i=0}^{k-1}{x^{n_i^{2^i}}}$</p>
+<p><strong>不过此处乘法做的是矩阵乘法</strong>。</p>
+<p>代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-comment">//x= [ a_1  b_1 ]   res = [ a_2  b_2 ]</span><br><span class="hljs-comment">//	 [ c_1  d_1 ]	      [ c_2  d_2 ] </span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">Fibonacci</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> a_1 = <span class="hljs-number">1</span>, b_1 = <span class="hljs-number">1</span>, c_1 = <span class="hljs-number">1</span>, d_1 = <span class="hljs-number">0</span>;<br>	<span class="hljs-type">int</span> a_2 = <span class="hljs-number">1</span>, b_2 = <span class="hljs-number">0</span>, c_2 = <span class="hljs-number">1</span>, d_2 = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">0</span>)<br>	&#123;<br>		<span class="hljs-keyword">if</span> ((n &amp; <span class="hljs-number">1</span>) == <span class="hljs-number">1</span>)<br>		&#123;<br>			<span class="hljs-comment">//res = (res * x)</span><br>			<span class="hljs-type">int</span> temp_a = a_2, temp_b = b_2, temp_c = c_2, temp_d = d_2;<br>			a_2 = temp_a * a_1 + temp_b * c_1;<br>			b_2 = temp_a * b_1 + temp_b * d_1;<br>			c_2 = temp_c * a_1 + temp_d * c_1;<br>			d_2 = temp_c * b_1 + temp_d * d_1;<br>		&#125;<br><br>		n /= <span class="hljs-number">2</span>; <span class="hljs-comment">//右移1bit</span><br><br>		<span class="hljs-comment">//x = x * x</span><br>		<span class="hljs-type">int</span> temp_a = a_1, temp_b = b_1, temp_c = c_1, temp_d = d_1;<br>		a_1 = temp_a * temp_a + temp_b * temp_c;<br>		b_1 = temp_a * temp_b + temp_b * temp_d;<br>		c_1 = temp_a * temp_c + temp_c * temp_d;<br>		d_1 = temp_b * temp_c + temp_d * temp_d;<br>	&#125;<br>	<span class="hljs-comment">//return res</span><br>	<span class="hljs-keyword">return</span> b_2;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h1><h2 id="4-14"><a href="#4-14" class="headerlink" title="4.14"></a>4.14</h2><ul>
+<li>给定任意正整数$n$，$n$的所有因子分别记为$d_0,d_1,\dots,d_r$，其中包括$1$和$n$。记函数：</li>
+</ul>
 <script type="math/tex; mode=display">
-3^2\ \ mod\ \ 23 = 9</script><script type="math/tex; mode=display">
-3^4\ \ mod\ 23 = 9*9\ \ mod\ 23 =12</script><script type="math/tex; mode=display">
-3^8\ \ mod\ 23 = 12*12\ \ mod\ 23 =6</script><script type="math/tex; mode=display">
-3^{16}\ \ mod\ 23 = 6*6\ \ mod\ 23 =13</script><p>故</p>
+F(n)=\phi(d_0)+\phi(d_1)+\dots+\phi(d_r)</script><p>现在需要证明$F(n)=n$。为完成这个任务，请依次完成以下小任务：</p>
+<p>$(a).$证明，对任意素数$p$, $F(p)=p$。</p>
+<p>$(b).$证明，对任意素数$p$，$F(p^2)=p^2$</p>
+<p>$(c).$证明，对任意素数$p$, $F(p^k)=p^k$，$k$是任意正整数</p>
+<p>$(d).$证明，对任意素数$p$和$q$，$F(pq)=pq$</p>
+<p>$(e).$证明函数$F$是积性函数，即对任意的正整数$m$和$n$，如果$gcd(m, n) = 1$，则$F(mn) = F(m)F(n)$。</p>
+<p>$(f).$最后，完成证明$F(n)=n$的任务。</p>
+<p><strong>证明：</strong></p>
+<p>$(a).$ 对于任意素数$p$，其只有两个因子,分别是$1$和$p$本身。</p>
 <script type="math/tex; mode=display">
-3^{17}\equiv 3*3^{16}\ \ (mod\ 13)=39\ \ mod\ 23=16</script><p>综上：</p>
+F(p)=\phi(1)+\phi(p)=1+(p-1)=p</script><hr>
+<p>$(b).$ 对于任意素数$p$，</p>
 <script type="math/tex; mode=display">
-3^{2019}\ mod\ 23 =16</script><h2 id="4-5"><a href="#4-5" class="headerlink" title="4.5"></a>4.5</h2><p>即证：</p>
+F(p^2)=\phi(1)+\phi(p)+\phi(p^2)=1+(p-1)+(p^2-p)=p^2</script><hr>
+<p>$(c).$ 对于任意素数$p$，</p>
 <script type="math/tex; mode=display">
-2^{70}+3^{70}\equiv0\ (mod\ 13)</script><p>根据费马小定理:</p>
+F(p^k)=\phi(1)+\sum _{i=1}^{k}\phi(p^i) \tag{*}</script><p>对于每个$\phi(p^i)，i\in\{1,2,\dots k\}$，都有：$\phi(p^i)=p^i-p^{i-1}$</p>
 <script type="math/tex; mode=display">
-2^{70}\equiv2^{5*12+10}\ mod\ 13 =2^{10}\ mod\ 13</script><script type="math/tex; mode=display">
-2^{5}\ mod\ 13 = 6</script><p>故</p>
+p^k-p^{k-1}=\phi(p^k)\\
+p^{k-1}-p^{k-2}=\phi(p^{k-1})\\
+\dots\\
+p^2-p=\phi(p^2)\\
+p-1=\phi(p)</script><p>累加得：</p>
 <script type="math/tex; mode=display">
-2^{10}\ mod\ 13 = 6*6\ mod\ 13 =10</script><p>同理:</p>
+p^{k}-1=\sum^k_{i=1}\phi(p^i)</script><p>将上式代入(*):</p>
 <script type="math/tex; mode=display">
-3^{70}\equiv3^{5*12+10}\ mod\ 13 =3^{10}\ mod\ 13</script><script type="math/tex; mode=display">
-3^{5}\ mod\ 13 = 9</script><p>故</p>
+F(p^k)=1+(p^k-1)=p^k</script><hr>
+<p>$(d).$ 对于任意素数$p$和$q$，</p>
 <script type="math/tex; mode=display">
-3^{10}\ mod\ 13 = 9*9\ mod\ 13 =3</script><p>故</p>
+F(pq)=\phi(p)+\phi(q)+\phi(1)+\phi(pq) \tag{**}</script><p>其中:$\phi(pq)=\phi(p)\phi(q)=(p-1)(q-1)$，$\phi(q)=q-1$，$\phi(p)=p-1$，代入(**)得：</p>
 <script type="math/tex; mode=display">
-2^{70}\equiv10\ mod\ 13</script><script type="math/tex; mode=display">
-3^{70}\equiv3\ mod\ 13</script><p>有：</p>
+F(pq)=(p-1)+(q-1)+1+(p-1)(q-1)=pq</script><hr>
+<p>$(e).$ 对任意正整数$m$和$n$,因为$gcd(m,n)=1$，故对于$m$,$n$的因子都各自互素。</p>
+<p>记$m$的所有因子分别为$d_{0_m},d_{1_m},\dots,d_{r_m}$，其中包括$1$和$m$。共有$(r-1)$个因子,有：</p>
 <script type="math/tex; mode=display">
-2^{70}+3^{70}\equiv13\ (mod\ 13) =0\ (mod\ 13)</script><p>Q.E.D</p>
-<h2 id="4-6"><a href="#4-6" class="headerlink" title="4.6"></a>4.6</h2><p>因为2与55互素，根据欧拉定理：</p>
+F(m)=\phi(d_{0_m})+\phi(d_{1_m})+\dots +\phi(d_{r_m})=\sum ^r_{i=0}d_{i_m} \tag{1}</script><p>记$n$的所有因子分别为$d_{0_n},d_{1_n},\dots,d_{t_n}$，其中包括$1$和$n$。共有$(t-1)$个因子，有：</p>
 <script type="math/tex; mode=display">
-2^{\phi(55)}\equiv1\ (mod\ 55)</script><p>而</p>
+F(n)=\phi(d_{0_n})+\phi(d_{1_n})+\dots +\phi(d_{r_n}) \tag{2}=\sum ^t_{j=0}d_{j_n}</script><p>则$mn$因子为$d_{i_m}d_{j_n},其中i\in\{0,1,\dots,r\},j\in\{0,1,\dots,t\}$。共有$(r-1)(t-1)$个因子。</p>
+<p>又因每个$d_{i_m}$与$d_{j_n}$互素，有$\phi(d_{i_m}d_{j_n})=\phi(d_{i_m})\phi(d_{j_n})$，故有：</p>
 <script type="math/tex; mode=display">
-\phi(55)=\phi(5)*\phi(11)=4*10=40</script><p>故有：</p>
+F(mn)=\sum ^t_{j=0}\sum ^r_{i=0}\phi (d_{i_m}d_{j_n})=\sum ^r_{i=0}\phi (d_{i_m})\sum ^t_{j=0}\phi(d_{j_n})=F(m)F(n)</script><hr>
+<p>$(f).$ 将正整数$n$表达为素数指数的乘积，即$n=p_1^{a_1}p_2^{a_2}\dots p_k^{a_k}$，有：</p>
 <script type="math/tex; mode=display">
-2^{40}\equiv1\ (mod\ 55)</script><script type="math/tex; mode=display">
-2^{100000}\equiv2^{2500*40}\ \equiv2^{40}\equiv1\ mod\ 55</script><p>故</p>
+F(n)=F(p_1^{a_1}p_2^{a_2}\dots p_k^{a_k})</script><p>根据$(d).F(pq)=pq$ 和 $(e).F(mn)=F(m)F(n)$</p>
+<p>将$p_2^{a_2}\dots p_k^{a_k}$视为整体，则有：</p>
 <script type="math/tex; mode=display">
-2^{100000}\ mod\ 55 =1</script><h2 id="4-8"><a href="#4-8" class="headerlink" title="4.8"></a>4.8</h2><p>该问等价于求: <script type="math/tex">7^{1000}\ mod\ 100</script></p>
-<p>由于7和1000互素，根据欧拉定理：</p>
+F(n)=F(p_1^{a_1}(p_2^{a_2}\dots p_k^{a_k}))=F(p_1^{a_1})F(p_2^{a_2}\dots p_k^{a_k})</script><p>将$p_3^{a_3}\dots p_k^{a_k}$视为整体，则有：</p>
 <script type="math/tex; mode=display">
-7^{\phi(100)}\equiv1\ (mod\ 100)</script><p>而</p>
+F(p_2^{a_2}(p_3^{a_3}\dots p_k^{a_k}))=F(p_2^{a_2})F(p_3^{a_3}\dots p_k^{a_k})</script><p>以此类推：</p>
 <script type="math/tex; mode=display">
-\phi(100)=\phi(5^2)*\phi(2^2)=20*2=40</script><p>故</p>
+F(n)=F(p_1^{a_1}p_2^{a_2}\dots p_k^{a_k})=F(p_1^{a_1})F(p_2^{a_2})\dots F(p_k^{a_k})</script><p>根据$(c).F(p^k)=p^k$</p>
 <script type="math/tex; mode=display">
-7^{40}\equiv1\ (mod\ 100)</script><script type="math/tex; mode=display">
-7^{1000}\equiv7^{25*40}\equiv7^{40}\equiv1\ (mod\ 100)</script><p>故<script type="math/tex">7^{1000}</script>的最后两个数位为01</p>
-
+F(n)=F(p_1^{a_1})F(p_2^{a_2})\dots F(p_k^{a_k})=p_1^{a_1}p_2^{a_2}\dots p_k^{a_k}</script><p>而 $p_1^{a_1}p_2^{a_2}\dots p_k^{a_k}=n$，故</p>
+<script type="math/tex; mode=display">
+F(n)=n</script>
                 
               </div>
             
@@ -368,8 +403,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>CINTA-TWO</div>
-      <div>http://example.com/2023/10/05/CINTA-TWO/</div>
+      <div>CINTA-2</div>
+      <div>http://example.com/2023/11/24/CINTA-2/</div>
     </div>
     <div class="license-meta">
       
@@ -381,7 +416,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月5日</div>
+          <div>2023年11月24日</div>
         </div>
       
       
@@ -413,9 +448,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/13/CINTA-THREE/" title="CINTA-THREE">
+                      <a href="/2023/12/09/CINTA-SEVEN/" title="CINTA-SEVEN">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CINTA-THREE</span>
+                        <span class="hidden-mobile">CINTA-SEVEN</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -423,8 +458,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/09/16/CINTA-ONE/" title="CINTA-ONE">
-                        <span class="hidden-mobile">CINTA-ONE</span>
+                      <a href="/2023/11/20/CINTA-SIX/" title="CINTA-SIX">
+                        <span class="hidden-mobile">CINTA-SIX</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

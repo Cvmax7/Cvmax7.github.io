@@ -16,22 +16,22 @@
   <meta name="author" content="Cvmax7">
   <meta name="keywords" content="">
   
-    <meta name="description" content="编程题1.模指数运算函数Mod_Exp123456789101112131415161718192021222324#define _CRT_SECURE_NO_WARNINGS 1#include &lt;stdio.h&gt;&#x2F;&#x2F;模指数运算int Mod_Exp(int a, int b, int m);int main()&amp;#123;	int a, b, m;	printf(&quot;输入">
+    <meta name="description" content="第十一章作业4. 请证明: 命题11.4. 设p是奇素数，a,b\in \Z且不被p整除。则有： ​    1.如果a\equiv b\pmod p，则(\dfrac{a}{p})&#x3D;(\dfrac{b}{p}) ​    2.(\dfrac{a}{p})(\dfrac{b}{p})&#x3D;(\dfrac{ab}{p}) ​    3.(\dfrac{a^2}{p})&#x3D;1  证明： 1. 如果a\equi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CINTA-TWO">
-<meta property="og:url" content="http://example.com/2023/10/05/CINTA-TWO/index.html">
+<meta property="og:title" content="CINTA-SEVEN">
+<meta property="og:url" content="http://example.com/2023/12/09/CINTA-SEVEN/index.html">
 <meta property="og:site_name" content="Cvmax7">
-<meta property="og:description" content="编程题1.模指数运算函数Mod_Exp123456789101112131415161718192021222324#define _CRT_SECURE_NO_WARNINGS 1#include &lt;stdio.h&gt;&#x2F;&#x2F;模指数运算int Mod_Exp(int a, int b, int m);int main()&amp;#123;	int a, b, m;	printf(&quot;输入">
+<meta property="og:description" content="第十一章作业4. 请证明: 命题11.4. 设p是奇素数，a,b\in \Z且不被p整除。则有： ​    1.如果a\equiv b\pmod p，则(\dfrac{a}{p})&#x3D;(\dfrac{b}{p}) ​    2.(\dfrac{a}{p})(\dfrac{b}{p})&#x3D;(\dfrac{ab}{p}) ​    3.(\dfrac{a^2}{p})&#x3D;1  证明： 1. 如果a\equi">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-05T13:28:49.000Z">
-<meta property="article:modified_time" content="2023-10-16T04:27:06.101Z">
+<meta property="article:published_time" content="2023-12-08T17:07:02.000Z">
+<meta property="article:modified_time" content="2023-12-09T17:09:28.477Z">
 <meta property="article:author" content="Cvmax7">
 <meta property="article:tag" content="Learning">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>CINTA-TWO - Cvmax7</title>
+  <title>CINTA-SEVEN - Cvmax7</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="CINTA-TWO"></span>
+            <span id="subtitle" data-typed-text="CINTA-SEVEN"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-05 21:28" pubdate>
-          2023年10月5日 晚上
+        <time datetime="2023-12-09 01:07" pubdate>
+          2023年12月9日 凌晨
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          2.4k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          16 分钟
+          21 分钟
         
       </span>
     
@@ -268,61 +268,88 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">CINTA-TWO</h1>
+            <h1 id="seo-header">CINTA-SEVEN</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="编程题"><a href="#编程题" class="headerlink" title="编程题"></a>编程题</h1><h2 id="1-模指数运算函数Mod-Exp"><a href="#1-模指数运算函数Mod-Exp" class="headerlink" title="1.模指数运算函数Mod_Exp"></a>1.模指数运算函数Mod_Exp</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-comment">//模指数运算</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">Mod_Exp</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b, <span class="hljs-type">int</span> m)</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>	<span class="hljs-type">int</span> a, b, m;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;输入a,b,m\n&quot;</span>);<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d,%d,%d&quot;</span>, &amp;a, &amp;b, &amp;m);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a的b次方模m的值为%d&quot;</span>, Mod_Exp(a, b, m));<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">Mod_Exp</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b, <span class="hljs-type">int</span> m)</span><br>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">while</span> (b &gt; <span class="hljs-number">0</span>)<br>	&#123;<br>		<span class="hljs-keyword">if</span> ((b &amp; <span class="hljs-number">1</span>) == <span class="hljs-number">1</span>) res = (res * a) % m;<br>		b /= <span class="hljs-number">2</span>;<br>		a = (a * a) % m;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h2 id="2-求乘法逆元的函数Mul-Inverse"><a href="#2-求乘法逆元的函数Mul-Inverse" class="headerlink" title="2.求乘法逆元的函数Mul_Inverse"></a>2.求乘法逆元的函数Mul_Inverse</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cmath&gt;</span></span><br><span class="hljs-comment">//求乘法逆元</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">Mul_Inverse</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> m)</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>	<span class="hljs-type">int</span> a, m;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;请输入a,m (a，m必须互素) \n&quot;</span>);<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d,%d&quot;</span>, &amp;a, &amp;m);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a模m的乘法逆元为%d&quot;</span>, Mul_Inverse(a, m));<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">Mul_Inverse</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> m)</span><br>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++)<br>	&#123;<br>		<span class="hljs-keyword">if</span> ((a * i) % m == <span class="hljs-number">1</span>)<br>		&#123;<br>			res = i;<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-<h1 id="计算题"><a href="#计算题" class="headerlink" title="计算题"></a>计算题</h1><h2 id="4-1"><a href="#4-1" class="headerlink" title="4.1"></a>4.1</h2><script type="math/tex; mode=display">
-3^{2019}\equiv 3^{91*22+17}\ \ (mod\ 23)</script><p>因为2019 = 91*(23-1) + 17, 根据费马小定理：</p>
+                <h1 id="第十一章作业"><a href="#第十一章作业" class="headerlink" title="第十一章作业"></a>第十一章作业</h1><h2 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h2><blockquote>
+<p>请证明:</p>
+<p>命题<script type="math/tex">11.4</script>. 设<script type="math/tex">p</script>是奇素数，<script type="math/tex">a,b\in \Z</script>且不被<script type="math/tex">p</script>整除。则有：</p>
+<p>​    1.如果<script type="math/tex">a\equiv b\pmod p</script>，则<script type="math/tex">(\dfrac{a}{p})=(\dfrac{b}{p})</script></p>
+<p>​    2.<script type="math/tex">(\dfrac{a}{p})(\dfrac{b}{p})=(\dfrac{ab}{p})</script></p>
+<p>​    3.<script type="math/tex">(\dfrac{a^2}{p})=1</script></p>
+</blockquote>
+<p><strong>证明：</strong></p>
+<p><strong><script type="math/tex">1.</script> 如果<script type="math/tex">a\equiv b\pmod p</script>，则<script type="math/tex">(\dfrac{a}{p})=(\dfrac{b}{p})</script></strong></p>
+<p>1)若<script type="math/tex">a,b</script>为模<script type="math/tex">p</script>的<script type="math/tex">\pmb{QR}</script>，则必存在<script type="math/tex">x\in \Z,s.t.\ a\equiv x^2 \pmod p</script>，又<script type="math/tex">a\equiv b\pmod p</script>，故</p>
 <script type="math/tex; mode=display">
-3^{91*22+17}\ \  \equiv 3^{17}\ \ (mod\ 23)=3*3^{16}\ \ (mod\ 23)</script><p>又因</p>
+a\equiv x^2 \equiv b\pmod p \Rightarrow(\dfrac{a}{p})=(\dfrac{b}{p})=1</script><p>2)若<script type="math/tex">a,b</script>为模<script type="math/tex">p</script>的<script type="math/tex">\pmb{QNR}</script>，对于<script type="math/tex">\forall x \in \Z, s.t. a\not \equiv x^2 \pmod p</script>,又<script type="math/tex">a\equiv b\pmod p</script>，故</p>
 <script type="math/tex; mode=display">
-3^2\ \ mod\ \ 23 = 9</script><script type="math/tex; mode=display">
-3^4\ \ mod\ 23 = 9*9\ \ mod\ 23 =12</script><script type="math/tex; mode=display">
-3^8\ \ mod\ 23 = 12*12\ \ mod\ 23 =6</script><script type="math/tex; mode=display">
-3^{16}\ \ mod\ 23 = 6*6\ \ mod\ 23 =13</script><p>故</p>
+a\equiv b \not \equiv x^2\pmod p \Rightarrow(\dfrac{a}{p})=(\dfrac{b}{p})=-1</script><p>综上：<script type="math/tex">(\dfrac{a}{p})=(\dfrac{b}{p})</script>证毕。</p>
+<hr>
+<p><strong><script type="math/tex">2.</script> <script type="math/tex">(\dfrac{a}{p})(\dfrac{b}{p})=(\dfrac{ab}{p})</script></strong></p>
+<p>1)若<script type="math/tex">a,b</script>为模<script type="math/tex">p</script>的<script type="math/tex">\pmb{QR}</script>，根据<script type="math/tex">\pmb{QR}×\pmb{QR}=\pmb{QR}</script>，<script type="math/tex">ab</script>也为模<script type="math/tex">p</script>的<script type="math/tex">\pmb{QR}</script>，所以</p>
 <script type="math/tex; mode=display">
-3^{17}\equiv 3*3^{16}\ \ (mod\ 13)=39\ \ mod\ 23=16</script><p>综上：</p>
+(\dfrac{a}{p})(\dfrac{b}{p})=1×1=1=(\dfrac{ab}{p})</script><p>2)若<script type="math/tex">a,b</script>为模<script type="math/tex">p</script>的<script type="math/tex">\pmb{QNR}</script>，根据<script type="math/tex">\pmb{QNR}×\pmb{QNR}=\pmb{QR}</script>，所以</p>
 <script type="math/tex; mode=display">
-3^{2019}\ mod\ 23 =16</script><h2 id="4-5"><a href="#4-5" class="headerlink" title="4.5"></a>4.5</h2><p>即证：</p>
+(\dfrac{a}{p})(\dfrac{b}{p})=(-1)×(-1)=1=(\dfrac{ab}{p})</script><p>3)若<script type="math/tex">a,b</script>其中一个为模<script type="math/tex">p</script>的<script type="math/tex">\pmb{QNR}</script>，另一个为模<script type="math/tex">p</script>的<script type="math/tex">\pmb{QR}</script>，根据<script type="math/tex">\pmb{QNR}×\pmb{QR}=\pmb{QNR}</script>，所以</p>
 <script type="math/tex; mode=display">
-2^{70}+3^{70}\equiv0\ (mod\ 13)</script><p>根据费马小定理:</p>
+(\dfrac{a}{p})(\dfrac{b}{p})=-1=(\dfrac{ab}{p})</script><p>综上：<script type="math/tex">(\dfrac{a}{p})(\dfrac{b}{p})=(\dfrac{ab}{p})</script>证毕。</p>
+<hr>
+<script type="math/tex; mode=display">3.$$$$(\dfrac{a^2}{p})=1</script><p>由于<script type="math/tex">a^2</script>为平方数，故<script type="math/tex">a^2</script>为模<script type="math/tex">p</script>的<script type="math/tex">\pmb{QR}</script>，故<script type="math/tex">(\dfrac{a^2}{p})=1</script>证毕。</p>
+<h2 id="5"><a href="#5" class="headerlink" title="5."></a>5.</h2><blockquote>
+<p>给出推论<script type="math/tex">11.1</script>的完整证明。</p>
+<p>推论<script type="math/tex">11.1</script>:设<script type="math/tex">p</script>是一个奇素数，则：</p>
 <script type="math/tex; mode=display">
-2^{70}\equiv2^{5*12+10}\ mod\ 13 =2^{10}\ mod\ 13</script><script type="math/tex; mode=display">
-2^{5}\ mod\ 13 = 6</script><p>故</p>
+(\dfrac{-1}{p})=\begin{cases} 1\ \ \ \ \ \ \  如果p\equiv1\pmod 
+4;\\ -1\ \ \ \ 如果p\equiv-1\pmod 
+4.
+\end{cases}</script></blockquote>
+<p><strong>证明：</strong>要证此命题，<strong>先证： </strong></p>
+<blockquote>
+<p>设<script type="math/tex">p</script>是奇素数，<script type="math/tex">a\in \Z</script>,且<script type="math/tex">gcd(a,p)=1</script>。那么 <script type="math/tex">(\dfrac{a}{p})\equiv a^{(p-1)/2}\pmod p</script></p>
+</blockquote>
+<p>只需考虑两种情形，即<script type="math/tex">(\dfrac{a}{p})=1</script>时与<script type="math/tex">(\dfrac{a}{p})=-1</script>时。</p>
+<p>1)当<script type="math/tex">(\dfrac{a}{p})=1</script>时，存在<script type="math/tex">x\in \Z, \ s.t.\ a\equiv x^2 \pmod p</script>，根据费马小定理：<script type="math/tex">x^{p-1}\equiv 1 \pmod p</script></p>
+<p>则有：</p>
 <script type="math/tex; mode=display">
-2^{10}\ mod\ 13 = 6*6\ mod\ 13 =10</script><p>同理:</p>
+x^{p-1}\equiv (x^2)^{(p-1)/2} \equiv a^{(p-1)/2} \equiv1\pmod p</script><p>故</p>
 <script type="math/tex; mode=display">
-3^{70}\equiv3^{5*12+10}\ mod\ 13 =3^{10}\ mod\ 13</script><script type="math/tex; mode=display">
-3^{5}\ mod\ 13 = 9</script><p>故</p>
+(\dfrac{a}{p})\equiv a^{(p-1)/2}\equiv 1\pmod p</script><p>2)当<script type="math/tex">(\dfrac{a}{p})=-1</script>时，由1)知：<script type="math/tex">a^{(p-1)/2}\not \equiv 1\pmod p</script>，即：<script type="math/tex">a^{(p-1)/2}-1\not \equiv 0\pmod p</script></p>
+<p>根据费马小定理：<script type="math/tex">a^{p-1}\equiv 1 \pmod p</script>，即：</p>
 <script type="math/tex; mode=display">
-3^{10}\ mod\ 13 = 9*9\ mod\ 13 =3</script><p>故</p>
+a^{p-1}-1\equiv (a^{(p-1)/2}-1)(a^{(p-1)/2}+1)\equiv0  \pmod p</script><p>故</p>
 <script type="math/tex; mode=display">
-2^{70}\equiv10\ mod\ 13</script><script type="math/tex; mode=display">
-3^{70}\equiv3\ mod\ 13</script><p>有：</p>
+(a^{(p-1)/2}+1)\equiv0  \pmod p</script><p>故</p>
 <script type="math/tex; mode=display">
-2^{70}+3^{70}\equiv13\ (mod\ 13) =0\ (mod\ 13)</script><p>Q.E.D</p>
-<h2 id="4-6"><a href="#4-6" class="headerlink" title="4.6"></a>4.6</h2><p>因为2与55互素，根据欧拉定理：</p>
+(\dfrac{a}{p})\equiv a^{(p-1)/2}\equiv -1\pmod p</script><p>综上：<script type="math/tex">(\dfrac{a}{p})\equiv a^{(p-1)/2}\pmod p</script></p>
+<hr>
+<p><strong>下证原命题：</strong></p>
+<p>因为<script type="math/tex">p\equiv1\pmod 4</script>，故<script type="math/tex">\exist k\in\Z,s.t.\ p=4k+1。</script>则</p>
 <script type="math/tex; mode=display">
-2^{\phi(55)}\equiv1\ (mod\ 55)</script><p>而</p>
+(\dfrac{-1}{p})\equiv (-1)^{(p-1)/2}\equiv (-1)^{(4k+1-1)/2} \equiv(-1)^{2k}\equiv 1 \pmod p</script><p>因为<script type="math/tex">p\equiv-1\pmod 4</script>，故<script type="math/tex">\exist k\in\Z,s.t.\ p=4k+3。</script>则</p>
 <script type="math/tex; mode=display">
-\phi(55)=\phi(5)*\phi(11)=4*10=40</script><p>故有：</p>
+(\dfrac{-1}{p})\equiv (-1)^{(p-1)/2}\equiv (-1)^{(4k+3-1)/2} \equiv(-1)^{2k+1}\equiv -1 \pmod p</script><p>证毕。</p>
+<h2 id="6"><a href="#6" class="headerlink" title="6."></a>6.</h2><blockquote>
+<p>设<script type="math/tex">p</script>是奇素数，请证明<script type="math/tex">\Z _p^*</script>的所有生成元都是模<script type="math/tex">p</script>的二次非剩余。</p>
+</blockquote>
+<p><strong>证明：</strong> 要证此命题，先证： </p>
+<blockquote>
+<p>设<script type="math/tex">p</script>是奇素数，<script type="math/tex">a\in \Z</script>,且<script type="math/tex">gcd(a,p)=1</script>。那么 <script type="math/tex">(\dfrac{a}{p})\equiv a^{(p-1)/2}\pmod p</script></p>
+</blockquote>
+<p>(已在第五题证过。)</p>
+<hr>
+<p>下证原命题：假设存在一个生成元<script type="math/tex">a\in\Z _p^*</script>，<script type="math/tex">a</script>是模<script type="math/tex">p</script>的<script type="math/tex">\pmb{QR}</script>。</p>
+<p>则有：</p>
 <script type="math/tex; mode=display">
-2^{40}\equiv1\ (mod\ 55)</script><script type="math/tex; mode=display">
-2^{100000}\equiv2^{2500*40}\ \equiv2^{40}\equiv1\ mod\ 55</script><p>故</p>
+(\dfrac{a}{p})=1\Leftrightarrow a^{(p-1)/2}\equiv 1\pmod p</script><p>由于<script type="math/tex">a</script>是<script type="math/tex">\Z _p^*</script>的生成元，故<script type="math/tex">a</script>为模<script type="math/tex">p</script>的原根，根据定义：</p>
 <script type="math/tex; mode=display">
-2^{100000}\ mod\ 55 =1</script><h2 id="4-8"><a href="#4-8" class="headerlink" title="4.8"></a>4.8</h2><p>该问等价于求: <script type="math/tex">7^{1000}\ mod\ 100</script></p>
-<p>由于7和1000互素，根据欧拉定理：</p>
+a^{\phi(p)}\equiv 1\pmod p</script><p>即<script type="math/tex">a</script>模<script type="math/tex">p</script>的阶为<script type="math/tex">\phi(p)=p-1</script>，即存在<strong>最小的整数<script type="math/tex">e</script></strong>，使得：</p>
 <script type="math/tex; mode=display">
-7^{\phi(100)}\equiv1\ (mod\ 100)</script><p>而</p>
+e=\phi(p)=p-1且a^e\equiv1\pmod p</script><p>而</p>
 <script type="math/tex; mode=display">
-\phi(100)=\phi(5^2)*\phi(2^2)=20*2=40</script><p>故</p>
-<script type="math/tex; mode=display">
-7^{40}\equiv1\ (mod\ 100)</script><script type="math/tex; mode=display">
-7^{1000}\equiv7^{25*40}\equiv7^{40}\equiv1\ (mod\ 100)</script><p>故<script type="math/tex">7^{1000}</script>的最后两个数位为01</p>
+(p-1)/2 < e</script><p>说明<script type="math/tex">e</script>不为最小的整数，故假设不成立，原命题得证。</p>
 
                 
               </div>
@@ -368,8 +395,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>CINTA-TWO</div>
-      <div>http://example.com/2023/10/05/CINTA-TWO/</div>
+      <div>CINTA-SEVEN</div>
+      <div>http://example.com/2023/12/09/CINTA-SEVEN/</div>
     </div>
     <div class="license-meta">
       
@@ -381,7 +408,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月5日</div>
+          <div>2023年12月9日</div>
         </div>
       
       
@@ -413,9 +440,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/13/CINTA-THREE/" title="CINTA-THREE">
+                      <a href="/2023/12/14/CINTA-EIGHT/" title="CINTA-EIGHT">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CINTA-THREE</span>
+                        <span class="hidden-mobile">CINTA-EIGHT</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -423,8 +450,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/09/16/CINTA-ONE/" title="CINTA-ONE">
-                        <span class="hidden-mobile">CINTA-ONE</span>
+                      <a href="/2023/11/24/CINTA-2/" title="CINTA-2">
+                        <span class="hidden-mobile">CINTA-2</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

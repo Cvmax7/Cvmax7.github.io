@@ -16,22 +16,22 @@
   <meta name="author" content="Cvmax7">
   <meta name="keywords" content="">
   
-    <meta name="description" content="编程题1.模指数运算函数Mod_Exp123456789101112131415161718192021222324#define _CRT_SECURE_NO_WARNINGS 1#include &lt;stdio.h&gt;&#x2F;&#x2F;模指数运算int Mod_Exp(int a, int b, int m);int main()&amp;#123;	int a, b, m;	printf(&quot;输入">
+    <meta name="description" content="第十二章1. 1.如果环R带乘法单位元1，对任意a\in R，请证明-a&#x3D;(-1)a。  证明：  1a+(-1)a&#x3D;(1+(-1))a&#x3D;0a&#x3D;0\\cancel后有：-1a&#x3D;(-1)a，又因环R带乘法单位元1 故：-a&#x3D;(-1)a 证毕。 2. 2.如果任取环R中的元素x都满足x^2&#x3D;x，请证明环R是交换环。  证明： 任取a,b\in R，根据封闭性:ab\in R 对于ab，有：(ab)^2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CINTA-TWO">
-<meta property="og:url" content="http://example.com/2023/10/05/CINTA-TWO/index.html">
+<meta property="og:title" content="CINTA-EIGHT">
+<meta property="og:url" content="http://example.com/2023/12/14/CINTA-EIGHT/index.html">
 <meta property="og:site_name" content="Cvmax7">
-<meta property="og:description" content="编程题1.模指数运算函数Mod_Exp123456789101112131415161718192021222324#define _CRT_SECURE_NO_WARNINGS 1#include &lt;stdio.h&gt;&#x2F;&#x2F;模指数运算int Mod_Exp(int a, int b, int m);int main()&amp;#123;	int a, b, m;	printf(&quot;输入">
+<meta property="og:description" content="第十二章1. 1.如果环R带乘法单位元1，对任意a\in R，请证明-a&#x3D;(-1)a。  证明：  1a+(-1)a&#x3D;(1+(-1))a&#x3D;0a&#x3D;0\\cancel后有：-1a&#x3D;(-1)a，又因环R带乘法单位元1 故：-a&#x3D;(-1)a 证毕。 2. 2.如果任取环R中的元素x都满足x^2&#x3D;x，请证明环R是交换环。  证明： 任取a,b\in R，根据封闭性:ab\in R 对于ab，有：(ab)^2">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-05T13:28:49.000Z">
-<meta property="article:modified_time" content="2023-10-16T04:27:06.101Z">
+<meta property="article:published_time" content="2023-12-14T04:38:10.000Z">
+<meta property="article:modified_time" content="2023-12-22T13:27:02.781Z">
 <meta property="article:author" content="Cvmax7">
 <meta property="article:tag" content="Learning">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>CINTA-TWO - Cvmax7</title>
+  <title>CINTA-EIGHT - Cvmax7</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="CINTA-TWO"></span>
+            <span id="subtitle" data-typed-text="CINTA-EIGHT"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-05 21:28" pubdate>
-          2023年10月5日 晚上
+        <time datetime="2023-12-14 12:38" pubdate>
+          2023年12月14日 下午
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          2.5k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          16 分钟
+          21 分钟
         
       </span>
     
@@ -268,61 +268,93 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">CINTA-TWO</h1>
+            <h1 id="seo-header">CINTA-EIGHT</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="编程题"><a href="#编程题" class="headerlink" title="编程题"></a>编程题</h1><h2 id="1-模指数运算函数Mod-Exp"><a href="#1-模指数运算函数Mod-Exp" class="headerlink" title="1.模指数运算函数Mod_Exp"></a>1.模指数运算函数Mod_Exp</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-comment">//模指数运算</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">Mod_Exp</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b, <span class="hljs-type">int</span> m)</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>	<span class="hljs-type">int</span> a, b, m;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;输入a,b,m\n&quot;</span>);<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d,%d,%d&quot;</span>, &amp;a, &amp;b, &amp;m);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a的b次方模m的值为%d&quot;</span>, Mod_Exp(a, b, m));<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">Mod_Exp</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b, <span class="hljs-type">int</span> m)</span><br>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">while</span> (b &gt; <span class="hljs-number">0</span>)<br>	&#123;<br>		<span class="hljs-keyword">if</span> ((b &amp; <span class="hljs-number">1</span>) == <span class="hljs-number">1</span>) res = (res * a) % m;<br>		b /= <span class="hljs-number">2</span>;<br>		a = (a * a) % m;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h2 id="2-求乘法逆元的函数Mul-Inverse"><a href="#2-求乘法逆元的函数Mul-Inverse" class="headerlink" title="2.求乘法逆元的函数Mul_Inverse"></a>2.求乘法逆元的函数Mul_Inverse</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> _CRT_SECURE_NO_WARNINGS 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cmath&gt;</span></span><br><span class="hljs-comment">//求乘法逆元</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">Mul_Inverse</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> m)</span>;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>	<span class="hljs-type">int</span> a, m;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;请输入a,m (a，m必须互素) \n&quot;</span>);<br>	<span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d,%d&quot;</span>, &amp;a, &amp;m);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;a模m的乘法逆元为%d&quot;</span>, Mul_Inverse(a, m));<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">Mul_Inverse</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> m)</span><br>&#123;<br>	<span class="hljs-type">int</span> res = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++)<br>	&#123;<br>		<span class="hljs-keyword">if</span> ((a * i) % m == <span class="hljs-number">1</span>)<br>		&#123;<br>			res = i;<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> res;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-<h1 id="计算题"><a href="#计算题" class="headerlink" title="计算题"></a>计算题</h1><h2 id="4-1"><a href="#4-1" class="headerlink" title="4.1"></a>4.1</h2><script type="math/tex; mode=display">
-3^{2019}\equiv 3^{91*22+17}\ \ (mod\ 23)</script><p>因为2019 = 91*(23-1) + 17, 根据费马小定理：</p>
+                <h1 id="第十二章"><a href="#第十二章" class="headerlink" title="第十二章"></a>第十二章</h1><h1 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h1><blockquote>
+<p>1.如果环R带乘法单位元1，对任意<script type="math/tex">a\in R</script>，请证明<script type="math/tex">-a=(-1)a</script>。</p>
+</blockquote>
+<p><strong>证明：</strong></p>
 <script type="math/tex; mode=display">
-3^{91*22+17}\ \  \equiv 3^{17}\ \ (mod\ 23)=3*3^{16}\ \ (mod\ 23)</script><p>又因</p>
+1a+(-1)a=(1+(-1))a=0a=0\\</script><p>cancel后有：<script type="math/tex">-1a=(-1)a</script>，又因环<script type="math/tex">R</script>带乘法单位元1</p>
+<p>故：<script type="math/tex">-a=(-1)a</script></p>
+<p>证毕。</p>
+<h1 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h1><blockquote>
+<p>2.如果任取环<script type="math/tex">R</script>中的元素<script type="math/tex">x</script>都满足<script type="math/tex">x^2=x</script>，请证明环<script type="math/tex">R</script>是交换环。</p>
+</blockquote>
+<p><strong>证明：</strong></p>
+<p>任取<script type="math/tex">a,b\in R</script>，根据封闭性:<script type="math/tex">ab\in R</script></p>
+<p>对于<script type="math/tex">ab</script>，有：<script type="math/tex">(ab)^2=ab</script></p>
+<p>对于<script type="math/tex">a,b</script>，有：<script type="math/tex">a^2=a,b^2=b</script>，则 <script type="math/tex">ab=a^2b^2</script></p>
+<p>故</p>
 <script type="math/tex; mode=display">
-3^2\ \ mod\ \ 23 = 9</script><script type="math/tex; mode=display">
-3^4\ \ mod\ 23 = 9*9\ \ mod\ 23 =12</script><script type="math/tex; mode=display">
-3^8\ \ mod\ 23 = 12*12\ \ mod\ 23 =6</script><script type="math/tex; mode=display">
-3^{16}\ \ mod\ 23 = 6*6\ \ mod\ 23 =13</script><p>故</p>
+ab=(ab)^2=abab=aabb</script><p>cancel后有：<script type="math/tex">ba=ab</script>，即说明<script type="math/tex">R</script>在乘法上满足交换律，故环<script type="math/tex">R</script>是交换环，证毕。</p>
+<h1 id="3-（新教材）"><a href="#3-（新教材）" class="headerlink" title="3.（新教材）"></a>3.（新教材）</h1><blockquote>
+<p>3.请解释为什么<script type="math/tex">\Z_n</script>在加法上的子群都是<script type="math/tex">\Z_n</script>的子环。</p>
+</blockquote>
+<p><strong>解：</strong></p>
+<p>记<script type="math/tex">\Z'</script>为<script type="math/tex">\Z_n</script>在加法上的一个子群。我们可知：<script type="math/tex">\Z'在模n的加法上封闭</script>，则有：</p>
 <script type="math/tex; mode=display">
-3^{17}\equiv 3*3^{16}\ \ (mod\ 13)=39\ \ mod\ 23=16</script><p>综上：</p>
+ab=\underbrace{a+\dots+a}_{b个}\in \Z'  \tag1</script><p>由于<script type="math/tex">\Z'</script>为<script type="math/tex">\Z_n</script>在加法上的一个子群，则有：</p>
 <script type="math/tex; mode=display">
-3^{2019}\ mod\ 23 =16</script><h2 id="4-5"><a href="#4-5" class="headerlink" title="4.5"></a>4.5</h2><p>即证：</p>
+a+(-b)=a-b\in \Z' \tag2</script><p>其中<script type="math/tex">(-b)</script>是<script type="math/tex">b</script>在加法上的逆元。</p>
+<p>根据<script type="math/tex">(1)(2):\Z'</script>为<script type="math/tex">\Z_n</script>的子环。</p>
+<p>证毕。</p>
+<h1 id="3-（旧教材第三题）"><a href="#3-（旧教材第三题）" class="headerlink" title="3.（旧教材第三题）"></a>3.（旧教材第三题）</h1><blockquote>
+<p>3.记<script type="math/tex">\Z[\sqrt2] = \{a+b \sqrt2:a,b\in \Z \}</script>，请证明<script type="math/tex">\Z[\sqrt 2]</script>是环，且是整环。</p>
+</blockquote>
+<p><strong>证明：</strong></p>
+<p>任取 <script type="math/tex">x_1 = a_1+b_1\sqrt 2 \in \Z[\sqrt 2]</script>，<script type="math/tex">x_2 = a_2+b_2\sqrt 2 \in \Z[\sqrt 2]</script>，<script type="math/tex">x_3 = a_3+b_3\sqrt 2 \ \ \ \in \Z[\sqrt 2]</script></p>
 <script type="math/tex; mode=display">
-2^{70}+3^{70}\equiv0\ (mod\ 13)</script><p>根据费马小定理:</p>
+x_1+x_2=(a_1+b_1\sqrt 2)+(a_2+b_2\sqrt 2)=(a_1+a_2)+(b_1+b_2)\sqrt2\ \ \ \in \Z[\sqrt2] \tag1</script><script type="math/tex; mode=display">
+x_1*x_2=(a_1+b_1\sqrt 2)(a_2+b_2\sqrt 2)=a_1a_2+(a_1b_2+a_2b_1+b_1b_2)\sqrt2 \ \ \ \in \Z[\sqrt2] \tag2</script><p><strong>根据<script type="math/tex">(1)(2)</script>：<script type="math/tex">\Z[\sqrt2]</script>在加法和乘法上封闭。</strong></p>
 <script type="math/tex; mode=display">
-2^{70}\equiv2^{5*12+10}\ mod\ 13 =2^{10}\ mod\ 13</script><script type="math/tex; mode=display">
-2^{5}\ mod\ 13 = 6</script><p>故</p>
+x_1+(x_2+x_3)=(x_1+x_2)+x_3=(a_1+a_2+a_3)+(b_1+b_2+b_3)\sqrt2 \tag3</script><script type="math/tex; mode=display">
+x_1+x_2=(a_1+a_2)+(b_1+b_2)\sqrt2=x_2+x_1 \tag4</script><script type="math/tex; mode=display">
+x_1+0=a_1+b_1\sqrt2=0+x_1 \tag5</script><script type="math/tex; mode=display">
+x_1+(-x_1)=(a_1-a_1)+(b_1-b_1)\sqrt2=(-x_1)+x_1=0 \tag6</script><p><strong>根据<script type="math/tex">(3)(4)(5)(6):\Z[\sqrt2]</script>在加法<script type="math/tex">(+)</script>上是一个阿贝尔群。</strong></p>
 <script type="math/tex; mode=display">
-2^{10}\ mod\ 13 = 6*6\ mod\ 13 =10</script><p>同理:</p>
+x_1*(x_2*x_3)=(a_1+b_1\sqrt2)*[a_2a_3+(a_2b_3+a_3b_2+b_2b_3)\sqrt2]</script><p>化简为：</p>
 <script type="math/tex; mode=display">
-3^{70}\equiv3^{5*12+10}\ mod\ 13 =3^{10}\ mod\ 13</script><script type="math/tex; mode=display">
-3^{5}\ mod\ 13 = 9</script><p>故</p>
+x_1*(x_2*x_3)=[a_1a_2a_3+2(a_2b_1b_3+a_3b_1b_2+b_1b_2b_3)]+(a_1a_2b_3+a_1a_3b_2+a_1b_2b_3+a_2a_3b_1)\sqrt2</script><script type="math/tex; mode=display">
+(x_1*x_2)*x_3=[a_1a_2a_3+2(a_2b_1b_3+a_3b_1b_2+b_1b_2b_3)]+(a_1a_2b_3+a_1a_3b_2+a_1b_2b_3+a_2a_3b_1)\sqrt2</script><script type="math/tex; mode=display">
+\therefore x_1*(x_2*x_3)=(x_1*x_2)*x_3\tag7</script><p><strong>根据<script type="math/tex">(7):\Z[\sqrt2]在乘法(*)上满足结合律</script>。</strong></p>
 <script type="math/tex; mode=display">
-3^{10}\ mod\ 13 = 9*9\ mod\ 13 =3</script><p>故</p>
+x_1*(x_2+x_3)=a_1a_2+a_1a_3+2b_1b_2+2b_1b_3+(a_1b_2+a_1b_3+a_2b_1+a_3b_1)\sqrt2</script><script type="math/tex; mode=display">
+(x_1*x_2)+(x_1*x_3)=a_1a_2+a_1a_3+2b_1b_2+2b_1b_3+(a_1b_2+a_1b_3+a_2b_1+a_3b_1)\sqrt2</script><script type="math/tex; mode=display">
+\therefore x_1*(x_2+x_3)=(x_1*x_2)+(x_1*x_3) \tag8</script><script type="math/tex; mode=display">
+(x_1+x_2)*x_3=a_1a_3+a_2a_3+2b_1b_3+2b_2b_3+(a_3b_1+a_3b_2+a_1b_3+a_2b_3)\sqrt2</script><script type="math/tex; mode=display">
+(x_1*x_3+x_2*x_3)=a_1a_3+a_2a_3+2b_1b_3+2b_2b_3+(a_3b_1+a_3b_2+a_1b_3+a_2b_3)\sqrt2</script><script type="math/tex; mode=display">
+\therefore (x_1+x_2)*x_3 = (x_1*x_3+x_2*x_3) \tag9</script><p><strong>根据<script type="math/tex">(8)(9):\Z[\sqrt2]</script>中，乘法对加法满足分配律。</strong></p>
+<p>故<script type="math/tex">\Z[\sqrt 2]</script>是环。</p>
+<p>现假设环<script type="math/tex">\Z[\sqrt 2]</script>中存在非零元素<script type="math/tex">x_1</script>与<script type="math/tex">x_2</script>互为零因子。则有</p>
 <script type="math/tex; mode=display">
-2^{70}\equiv10\ mod\ 13</script><script type="math/tex; mode=display">
-3^{70}\equiv3\ mod\ 13</script><p>有：</p>
+x_1*x_2=a_1a_2+(a_1b_2+a_2b_1+b_1b_2)\sqrt2 = 0</script><p>即该方程组(*)有解：</p>
 <script type="math/tex; mode=display">
-2^{70}+3^{70}\equiv13\ (mod\ 13) =0\ (mod\ 13)</script><p>Q.E.D</p>
-<h2 id="4-6"><a href="#4-6" class="headerlink" title="4.6"></a>4.6</h2><p>因为2与55互素，根据欧拉定理：</p>
+\begin{cases}
+a_1a_2=0\\
+a_1b_2+a_2b_1+b_1b_2=0
+\end{cases}</script><p>又因<script type="math/tex">x_1,x_2</script>非零，即</p>
 <script type="math/tex; mode=display">
-2^{\phi(55)}\equiv1\ (mod\ 55)</script><p>而</p>
+a_1\not = 0,b_1\not = 0,a_2\not = 0,b_2\not = 0</script><p>与<script type="math/tex">(*)</script>矛盾。故环<script type="math/tex">\Z[\sqrt 2]</script>中无零因子，即为整环。</p>
+<p>证毕。</p>
+<h1 id="14"><a href="#14" class="headerlink" title="14."></a>14.</h1><blockquote>
+<p>14.证明环<script type="math/tex">2\Z</script>不与环<script type="math/tex">3\Z</script>同构。</p>
+</blockquote>
+<p><strong>证明：</strong></p>
+<p>假设环<script type="math/tex">2\Z</script>与环<script type="math/tex">3\Z</script>同构。则映射<script type="math/tex">\phi:2\Z \rightarrow 3\Z</script>满足：<script type="math/tex">\forall a,b\in 2\Z</script>，</p>
 <script type="math/tex; mode=display">
-\phi(55)=\phi(5)*\phi(11)=4*10=40</script><p>故有：</p>
+\phi(a+b)=\phi(a)+\phi(b)\\
+\phi(ab)=\phi(a)\phi(b)</script><p>且<script type="math/tex">\phi</script>为双射。</p>
+<p>取<script type="math/tex">a=b=2 \in 2\Z</script>，则根据环<script type="math/tex">2\Z</script>与环<script type="math/tex">3\Z</script>同构，有：</p>
 <script type="math/tex; mode=display">
-2^{40}\equiv1\ (mod\ 55)</script><script type="math/tex; mode=display">
-2^{100000}\equiv2^{2500*40}\ \equiv2^{40}\equiv1\ mod\ 55</script><p>故</p>
+\phi(2+2)=\phi(4)=\phi(2)+\phi(2)</script><script type="math/tex; mode=display">
+\phi(2*2)=\phi(2)\phi(2)</script><p>则有：</p>
 <script type="math/tex; mode=display">
-2^{100000}\ mod\ 55 =1</script><h2 id="4-8"><a href="#4-8" class="headerlink" title="4.8"></a>4.8</h2><p>该问等价于求: <script type="math/tex">7^{1000}\ mod\ 100</script></p>
-<p>由于7和1000互素，根据欧拉定理：</p>
-<script type="math/tex; mode=display">
-7^{\phi(100)}\equiv1\ (mod\ 100)</script><p>而</p>
-<script type="math/tex; mode=display">
-\phi(100)=\phi(5^2)*\phi(2^2)=20*2=40</script><p>故</p>
-<script type="math/tex; mode=display">
-7^{40}\equiv1\ (mod\ 100)</script><script type="math/tex; mode=display">
-7^{1000}\equiv7^{25*40}\equiv7^{40}\equiv1\ (mod\ 100)</script><p>故<script type="math/tex">7^{1000}</script>的最后两个数位为01</p>
+\phi(2)+\phi(2)=\phi(2)\phi(2) \tag{*}</script><p>由于经过映射<script type="math/tex">\phi</script>后，环<script type="math/tex">3\Z</script>中非零元素都为奇数，两奇数相加必为偶数，两奇数相乘必为奇数。与式<script type="math/tex">(*)</script>矛盾。</p>
+<p>故假设不成立，证毕。</p>
 
                 
               </div>
@@ -368,8 +400,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>CINTA-TWO</div>
-      <div>http://example.com/2023/10/05/CINTA-TWO/</div>
+      <div>CINTA-EIGHT</div>
+      <div>http://example.com/2023/12/14/CINTA-EIGHT/</div>
     </div>
     <div class="license-meta">
       
@@ -381,7 +413,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月5日</div>
+          <div>2023年12月14日</div>
         </div>
       
       
@@ -413,18 +445,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/13/CINTA-THREE/" title="CINTA-THREE">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CINTA-THREE</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/09/16/CINTA-ONE/" title="CINTA-ONE">
-                        <span class="hidden-mobile">CINTA-ONE</span>
+                      <a href="/2023/12/09/CINTA-SEVEN/" title="CINTA-SEVEN">
+                        <span class="hidden-mobile">CINTA-SEVEN</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
